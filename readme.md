@@ -9,12 +9,18 @@
 </div>
 
 
-### What is done?
+### What is this?
+This is a Stylus theme for Roll20, forked from Kirill S's incredible work originally posted [here](https://app.roll20.net/forum/post/7841113/show-off-your-style-2-the-stylening/?pageforid=8680812#post-8680812).
+I've made my own tweaks, added styles for several extra components, and shifted the theme to red.
 
-- all typography: used custom font for headers, numbers, main text
-- color palette: dark blue grey bg, violet elements and yellow accents
-- 5e DND charsheet
+
+### What does this theme do?
+
+- **Overhauls the look and feel of the entire Roll20 playspace.**
+- **New typography** - Custom fonts have been included for headers, numbers, and main text, with several custom icons. Everything's less "default" feeling.
+- **Dark theme** - Modern, dark UI, with accents in the official DnD red. This affects most of the main elements of the player-facing UI. I haven't tested this as a DM.
+- **Cleaner chat** - More modern and easier to read. The chat panel has better spacing between blocks of text, and is easier to scan at a glance with clear numbers.
+- **5e DND charsheet** - Numerous tweaks to the 5E character sheet, making it tidier and clearer to read.
 
 ### Disclaimer
-I don't know how it will work with other sheets and games
-
+This hasn't been tested with any other sheets or games. This has also been designed primarily as a player, there may well be several DM-focused elements which are broken by this theme.
