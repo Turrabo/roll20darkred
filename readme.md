@@ -2,7 +2,7 @@
 
 # Roll20 Dark Cobalt
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/shevernitskiy/roll20darkcobalt/master/roll20darkcobalt.user.css) ![GitHub last commit](https://img.shields.io/github/last-commit/shevernitskiy/roll20darkcobalt) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fshevernitskiy%2Froll20darkcobalt)](https://hits.seeyoufarm.com) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css) ![GitHub last commit](https://img.shields.io/github/last-commit/Turrabo/roll20darkred) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTurrabo%2Froll20darkred)](https://hits.seeyoufarm.com) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ![preview](https://raw.githubusercontent.com/shevernitskiy/roll20darkcobalt/master/images/preview.png)
 
@@ -24,3 +24,9 @@ I've made my own tweaks, added styles for several extra components, and shifted 
 
 ### Disclaimer
 This hasn't been tested with any other sheets or games. This has also been designed primarily as a player, there may well be several DM-focused elements which are broken by this theme.
+
+
+### How do I use dis?
+
+1. Install the Stylus plugin for your respective browser. (Here it is for Chrome)
+2. Next, [click this link](https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css) to install this theme as a module for your plugin, it will automatically kick-in when you open a Roll20 game. 
