@@ -1,6 +1,6 @@
 <div align="center">
 
-# Roll20 Dark Cobalt
+# Roll20 Dark Red
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css) ![GitHub last commit](https://img.shields.io/github/last-commit/Turrabo/roll20darkred) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTurrabo%2Froll20darkred)](https://hits.seeyoufarm.com) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
