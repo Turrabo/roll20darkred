@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.1.1
+@version      1.2.0
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,13 +40,13 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Dark Cobalt v1.0.57 \A 🔗github.com/shevernitskiy/roll20darkcobalt";
-        --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s;
-        --anim-attack: slide-in-blurred-right 0.6s;
-        --anim-damage: slide-in-blurred-top 0.5s;
-        --anim-traits: bounceInLeft 1s;
+        --version: "Roll20 Dark Red V1.2.0 - by Turabbo & Shevernitskiy";
+/*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
+/*         --anim-attack: slide-in-blurred-right 0.6s; */
+/*         --anim-damage: slide-in-blurred-top 0.5s; */
+/*         --anim-traits: bounceInLeft 1s; */
 /*         --anim-crit: text-flicker-in-glow 2s linear 1s both; */
-        --anim-spell: jackInTheBox 1s;
+/*         --anim-spell: jackInTheBox 1s; */
 /*         --anim-simple: flipInY 1s; */
 		--anim-sheet: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
@@ -1252,24 +1252,41 @@
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
     /* -------------------------------- ELEMENTS -------------------------------- */
-    /* Scrollbar */
-    #editor-wrapper::-webkit-scrollbar, #rightsidebar .ui-tabs-panel::-webkit-scrollbar, textarea::-webkit-scrollbar {
+    /* Scrollbar */    
+    :root {
+        --scrollbarBG:rgba(0, 0, 0, .17);
+        --thumbBG: rgba(155, 155, 232, .19);
+        --thumbBGhover: rgba(222, 222, 255, .29);
+    }
+    
+    *::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 12px;
         height: 12px;
     }
-    #editor-wrapper::-webkit-scrollbar-thumb, #rightsidebar .ui-tabs-panel::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
-        border-radius: 6px;
-        border: 2px solid rgba(0, 0, 0, 0);
-        background-color: rgba(136, 136, 255, 0.25);
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
     }
-    #editor-wrapper::-webkit-scrollbar-corner, #rightsidebar .ui-tabs-panel::-webkit-scrollbar-corner, textarea::-webkit-scrollbar-corner {
+    *::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG);
+        border-radius: 6px;
+    }
+    *::-webkit-scrollbar-thumb:hover {
+        background-color: var(--thumbBGhover);
+    }
+    *::-webkit-scrollbar-corner {
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     }
-    .canvas-container {
-        transform: translateX(10px);
-    }
+    
+    
+    
+    
+    
     /* Buttons */
     .btn, .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
         font-family: var(--font-primary);
@@ -2772,11 +2789,10 @@
     /* -------------------------------------------------------------------------- */
     /* ---------------------------------- Main ---------------------------------- */
     #rightsidebar, #rightsidebar .ui-widget-content {
-        background-color: var(--color-bg-light);
+        background-color: var(--color-bg-light) !important;
         color: var(--color-text-primary);
         font-family: var(--font-secondary);
         border: 0px;
-        box-shadow: 0 0 0 2px #666;
         border-radius: 0;
     }
     #rightsidebar p strong, #rightsidebar label strong {
@@ -2792,6 +2808,28 @@
     #rightsidebar div.content a:not(.btn) {
         color: var(--color-yellow) !important;
     }
+    .textchatcontainer .sheet-header > a {
+        max-width: 80%;
+        line-height: 1;
+    }
+    
+    #rightsidebar .ui-tabs-panel {
+        top: 0 !important;
+    }
+    #rightsidebar #textchat:not(:empty) {
+        height: calc(100% - 169px) !important;
+        padding-bottom: 15px;
+    }
+    
+    .textchatcontainer .chatlogmessage.message.system {
+        padding: 24px 10px 20px !important;
+    }
+    
+    #rightsidebar,
+    #textchat-input {
+        width: 298px;
+        right: 1px;
+    }
     /* -------------------------------- Tab Menu -------------------------------- */
     #rightsidebar ul.tabmenu {
         width: inherit !important;
@@ -2803,7 +2841,9 @@
         height: auto !important;
         display: flex;
         box-shadow: 0 13px 17px -11px black;
+        position: relative;
     }
+
     #rightsidebar ul.tabmenu li {
         display: flex;
         flex: 1;
@@ -3471,7 +3511,7 @@
     /* ------------------------------- Text Input ------------------------------- */
     #textchat-input {
         padding: 10px 5px !important;
-        /*box-shadow: 0 -3px 5px -3px var(--color-text-disabled);*/
+        box-shadow: 0 -13px 10px -10px rgba(0,0,0,0.4);
         height: 90px !important;
         background-color: var(--color-bg-light);
         border: 0px;
@@ -3513,7 +3553,7 @@
     /* System */
     .textchatcontainer .message.system {
         color: var(--color-text-disabled);
-        background-color: var(--color-bg-medium);
+        background-color: transparent;
     }
     #textchat .userscript-sharelink {
         background: none;
@@ -3521,14 +3561,39 @@
     }
     /* You */
     .textchatcontainer .message.you {
-        background-color: var(--color-bg-dark) !important;
+        background-color: transparent !important;
     }
     /* Whisper */
     .textchatcontainer .message.private {
         background-color: var(--color-bg-light);
         box-shadow: inset 0px 0px 8px var(--color-yellow);
     }
+    .textchatcontainer .private.whisper {
+        padding: 20px 10px !important;
+        margin-top: 20px;
+    }
+    .textchatcontainer .private.whisper .avatar {
+        top: 7px !important;
+    }
+    .textchatcontainer .private.whisper .by {
+        margin-top: 0;
+    }
+    /* Roll result */
+    .textchatcontainer .message.rollresult .avatar {
+        top: 35px !important;
+    }
+    .textchatcontainer .message.rollresult .by {
+        margin-left: -17px
+    }
+    .textchatcontainer .rollresult.quantumRoll {
+        background-position-x: calc(100% - 11px) !important;
+        background-size: 25px 25px !important;
+    }
     /* Other */
+    .textchatcontainer .error {
+        padding: 10px !important;
+        margin-top: 20px;
+    }
     .textchatcontainer .inlinerollresult {
         background-color: var(--color-element-bg);
         border-radius: 5px;
@@ -3571,7 +3636,9 @@
         flex: 1;
         flex-direction: column;
         justify-content: center;
-        padding: 1em 2em 0;
+        padding: 0.1em 2.5em 0;
+        margin: 2em -10px 0;
+        background-color: var(--color-bg-dark) !important;
     }
     .userscript-commandintro img {
         filter: invert(1) hue-rotate(207deg) brightness(0.7) contrast(2.1);
@@ -3668,9 +3735,9 @@
     .textchatcontainer .avatar {
         right: 10px;
         left: auto;
-        top: -4px !important;
-        width: 38px;
-        height: 38px;
+        top: -5px !important;
+        width: 30px;
+        height: 30px;
         opacity: 1;
     }
     .textchatcontainer .avatar img {
@@ -5470,7 +5537,12 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
         font-family: var(--font-number);
         font-size: 20px;
     }
-    .sheet-rolltemplate-npc .inlinerollresult.fullcrit, .sheet-rolltemplate-npcaction .inlinerollresult.fullcrit, .sheet-rolltemplate-npcatk .inlinerollresult.fullcrit, .sheet-rolltemplate-npcdmg .inlinerollresult.fullcrit, .sheet-rolltemplate-npcfullatk .sheet-damagetemplate .inlinerollresult.fullcrit, .sheet-rolltemplate-npcdmg, .sheet-damagetemplate .inlinerollresult.fullcrit {
+    .sheet-rolltemplate-npc .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-npcaction .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-npcatk .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-npcdmg .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-npcfullatk .sheet-damagetemplate .inlinerollresult.fullcrit,
+    .sheet-damagetemplate .inlinerollresult.fullcrit {
         color: var(--color-green) !important;
         text-shadow: 0px 0px 20px var(--color-green), 0px 0px 20px var(--color-green) !important;
     }
