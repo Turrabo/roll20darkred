@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.3.1
+@version      1.3.2
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.3.1 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.3.2 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -1994,14 +1994,16 @@
         z-index: 999999;
         width: 100vw !important;
         height: 100vh !important;
+        background-color: black;
         background-image: radial-gradient(#424242, #000 60%);
         background-position: center;
-        animation: background-pulse 5s ease infinite;
+        background-repeat: no-repeat;
+        animation: background-pulse 6s ease infinite;
     }
     @keyframes background-pulse {
-        0% {background-size: 80% 80%;}
-        25% {background-size: 130% 130%;}
-        100% {background-size: 80% 80%;}
+        0% {background-size: 70% 70%;}
+        25% {background-size: 100% 100%;}
+        100% {background-size: 70% 70%;}
     }
     #loading-overlay::after {
         content: var(--version);
