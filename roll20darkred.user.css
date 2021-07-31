@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.3.4
+@version      1.4.0
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.3.4 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.4.0 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2112,250 +2112,15 @@
         left: 5px;
         padding: 0px;
     }
-    /* ------------------------------ Radial Menu ------------------------------- */
-    /*
-    #radial-menu .button {
-        background: var(--color-element-bg) !important;
-        border: 0px;
-    }
-    #radial-menu .button.button-1 {
-        border-radius: 0px 0px 25px 25px;
-    }
-    #radial-menu .button.button-2 {
-        border-radius: 25px 25px 0px 0px;
-    }
-    #radial-menu .button.button-1,
-    #radial-menu .button.button-2 {
-        box-shadow: 0px 0px 2px var(--color-text-disabled);
-        left: 95px;
-    }
-    #radial-menu .button.button-2 {
-        top: -5px;
-    }
-    #radial-menu .button.button-1 {
-        top: 33px;
-    }
-    #radial-menu .button.button-3,
-    #radial-menu .button.button-4,
-    #radial-menu .button.button-5 {
-        left: -60px;
-    }
-    #radial-menu .button.button-3 {
-        box-shadow: 0px 0px 2px var(--color-text-disabled),
-            inset 0px 0px 5px var(--color-green),
-            inset 0px 0px 10px var(--color-green),
-            inset 0px 0px 15px var(--color-green) !important;
-        top: 15px;
-    }
-    #radial-menu .button.button-4 {
-        box-shadow: 0px 0px 2px var(--color-text-disabled),
-            inset 0px 0px 5px var(--color-blue),
-            inset 0px 0px 10px var(--color-blue),
-            inset 0px 0px 15px var(--color-blue) !important;
-        top: 60px;
-    }
-    #radial-menu .button.button-5 {
-        box-shadow: 0px 0px 2px var(--color-text-disabled),
-            inset 0px 0px 5px var(--color-red),
-            inset 0px 0px 10px var(--color-red),
-            inset 0px 0px 15px var(--color-red) !important;
-        top: -30px;
-    }
-    #radial-menu .button div.inner {
-        background: none;
-        color: var(--color-text-primary);
-        font-family: var(--font-number);
-        font-weight: 800;
-        margin-top: 5px;
-        text-shadow: 0px 0px 5px var(--color-bg-dark),
-            0px 0px 2px var(--color-bg-dark), 0px 0px 2px var(--color-bg-dark);
-    }
-    #radial-menu .button.button-1 div.inner,
-    #radial-menu .button.button-2 div.inner {
-        margin-top: 2px;
-    }
-    #radial-menu .button div.inner span {
-        font-size: 24px !important;
-    }
-    #radial-menu .markermenu {
-        background: var(--color-element-bg) !important;
-        box-shadow: 0px 0px 2px var(--color-text-disabled);
-    }
-    #radial-menu .markermenu .markercolor,
-    #radial-menu .markermenu .markericon {
-        border: 5px;
-    }
-    #radial-menu .markermenu.open {
-        width: 230px;
-        height: 225px;
-        border-radius: 15px;
-    }
-    #radial-menu .markermenu .markericon.active,
-    #radial-menu .markermenu .markercolor.active {
-        outline: 2px dashed var(--color-yellow);
-        outline-offset: -2px;
-        border: 0px;
-        background-color: var(--color-yellow);
-        border-radius: 5px;
-    }
-    #radial-menu .markermenu .markercolor.dead {
-        color: var(--color-red);
-        top: -2px;
-    }
-	*/
-    /*#radial-menu {
-    --color-text-primary: #fff;
-    --color-bg-dark: #1c1d28;
-    --color-text-disabled: #888994;
-    --color-element-bg: #eaeaea;
-    --color-red: #f85212;
-    --color-green: #78ff10;
-    --color-blue: #0c6be7;
-    --color-yellow: #fc0;
-    --font-number: "Ruda", sans-serif;
-}
-#radial-menu .button {
-    background: var(--color-element-bg) !important;
-    border: 0px;
-}
-#radial-menu .button.button-1 {
-    border-radius: 0px 0px 25px 25px;
-}
-#radial-menu .button.button-2 {
-    border-radius: 25px 25px 0px 0px;
-}
-#radial-menu .button.button-1,
-#radial-menu .button.button-2 {
-    box-shadow: 0px 0px 2px var(--color-text-disabled);
-    top: 150px !important;
-    left: -60px;
-}
-#radial-menu .button.button-2 {
-    top: 111px !important;
-}
-#radial-menu .button.button-1 {
-    top: 33px;
-}
-#radial-menu .button.button-3,
-#radial-menu .button.button-4,
-#radial-menu .button.button-5 {
-    left: -60px;
-}
-#radial-menu .button.button-3 {
-    box-shadow: 0px 0px 2px var(--color-text-disabled),
-    inset 0px 0px 5px var(--color-green),
-    inset 0px 0px 10px var(--color-green),
-    inset 0px 0px 15px var(--color-green) !important;
-    top: 15px;
-}
-#radial-menu .button.button-4 {
-    box-shadow: 0px 0px 2px var(--color-text-disabled),
-    inset 0px 0px 5px var(--color-blue),
-    inset 0px 0px 10px var(--color-blue),
-    inset 0px 0px 15px var(--color-blue) !important;
-    top: 60px;
-	z-index: 1;
-}
-#radial-menu .button.button-5 {
-    box-shadow: 0px 0px 2px var(--color-text-disabled),
-    inset 0px 0px 5px var(--color-red),
-    inset 0px 0px 10px var(--color-red),
-    inset 0px 0px 15px var(--color-red) !important;
-    top: -30px;
-	z-index: 1;
-}
-#radial-menu .button.button-1 div.inner,
-#radial-menu .button.button-2 div.inner {
-    margin-top: 2px;
-}
-#radial-menu .button div.inner span {
-    font-size: 24px;
-}
-#radial-menu .markermenu {
-    background: var(--color-element-bg) !important;
-    box-shadow: 0px 0px 2px var(--color-text-disabled);
-}
-#radial-menu .markermenu .markercolor,
-#radial-menu .markermenu .markericon {
-    border: 5px;
-}
+    
+    
+    
+    
+    
+    
+    
+    
 
-#radial-menu .popupvalue {
-    position: absolute;
-    top: 5px;
-    left: 45px;
-    width: 55px;
-    height: 30px;
-    z-index: 1005
-}
-#radial-menu .popupvalue input {
-    width: 100%;
-    font-size: 16px
-}
-#radial-menu {
-    position: fixed;
-    top: 380px !important;
-    left: 80px !important;
-}
-#radial-menu .markermenu.open {
-    width: 268px;
-    height: 265px;
-    border-radius: 15px;
-}
-#radial-menu .markermenu .markercolor,
-#radial-menu .markermenu .markericon {
-    border: 5px;
-}
-#radial-menu .markermenu .markericon.active,
-#radial-menu .markermenu .markercolor.active {
-    outline: 2px dashed var(--color-yellow);
-    outline-offset: -2px;
-    border: 0px;
-    background-color: var(--color-yellow);
-    border-radius: 5px;
-}
-#radial-menu .markermenu .markercolor.dead {
-    top: -2px;
-}
-	
-#radial-menu .button.button-1:after {
-    position: relative;
-    content: "👟";
-    font-size: 24px;
-	z-index: 9999 !important;
-    top: -138px;
-    left: -19px;
-    border-radius: 25px 25px 25px 25px;
-    padding: 3px;
-    text-shadow: 0px 0px 2px #000, 0px 0px 5px #000;
-	color: white;
-}
-#radial-menu .button.button-2:after {
-    position: relative;
-    content: "❤️";
-    font-size: 24px;
-	z-index: -1 !important;
-    top: -138px;
-    left: -19px;
-    border-radius: 25px 25px 25px 25px;
-    padding: 3px;
-    text-shadow: 0px 0px 2px #000, 0px 0px 5px #000;
-	color: white;
-}
-#radial-menu .button.button-3:after {
-    position: relative;
-    content: "🛡️";
-    font-size: 24px;
-	z-index: 9999 !important;
-    top: -90px;
-    left: -15px;
-    border-radius: 25px 25px 25px 25px;
-    padding: 3px;
-    text-shadow: 0px 0px 2px #000, 0px 0px 5px #000;
-	color: white;
-}
-
-	*/
     /* ------------------------------ Flotating Bar ----------------------------- */
     #floatingtoolbar, #floatingtoolbar div.submenu ul, #editinglayer li.gm_slider_box, #secondary-toolbar, #color_selector, #page-toolbar .pages .availablepage .page-actions {
         background-color: var(--color-floating-bar-bg);
@@ -2387,21 +2152,20 @@
         box-shadow: 0px 0px 0px var(--color-button-main);
         border: 0px;
     }
-    #floatingtoolbar li#diceroller div.submenu li.quickdice div:last-of-type {
-        border-right: none !important;
-    }
     .quickdice .quickdice-label:first-child {
         text-align: right !important;
-        padding-right: 0.8em;
-        margin-left: -0.8em;
         font-family: monospace;
         text-transform: uppercase;
         display: flex;
         flex-direction: row-reverse;
     }
+    .quickdice > div:first-child {
+        flex-grow: 1 !important;
+        padding-right: 0.5em;
+        max-width: 80px;
+    }
     .quickdice .quickdice-label:first-child span {
         text-transform: lowercase;
-        margin-left: 0.5em;
         width: 20px;
         white-space: nowrap;
         overflow: hidden;
@@ -2442,10 +2206,12 @@
         display: none;
     }
     #floatingtoolbar div.submenu ul {
-        width: 270px;
+        width: unset;
+        padding: 5px;
     }
     #floatingtoolbar div.submenu ul li {
         font-size: 18px;
+        white-space: nowrap;
     }
     #floatingtoolbar div.submenu ul:not(.selZoom) li:not(.quickdice) {
         position: relative;
@@ -2453,74 +2219,501 @@
     }
     #floatingtoolbar div.submenu ul:not(.selZoom) li:not(.quickdice) > span {
         position: absolute;
-        width: 30px !important;
         text-align: center;
         padding: 0 !important;
         margin: 0;
-        left: 0;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-55%) scale(0.8);
     }
     #floatingtoolbar li#diceroller div.quickdice-label, #floatingtoolbar li#diceroller div.quickdice-toggle, #floatingtoolbar li#diceroller div.quickdice-button {
         flex: none;
         flex-grow: 0;
     }
     #floatingtoolbar li#diceroller div.quickdice-label, #floatingtoolbar li#diceroller div[data-toggle-type="gmroll"] {
-        width: 105px;
+        width: 95px;
     }
-    #floatingtoolbar li#diceroller div[data-toggle-type="inline"], #floatingtoolbar li#diceroller div[data-group="exploding"], #floatingtoolbar li#diceroller div.quickdice-button {
-        width: 40px;
-    }
-    #floatingtoolbar li#diceroller div.submenu li.quickdice div {
-        border-right: 1px solid var(--color-text-disabled) !important;
-    }
-    #floatingtoolbar li.gmlayer img#editing_layer_icon, #floatingtoolbar li.gmlayer div.submenu li.choosegmlayer img, #floatingtoolbar li.objects div.submenu li.choosegmlayer img, #floatingtoolbar li.map div.submenu li.choosegmlayer img, #floatingtoolbar li.pan img, #floatingtoolbar li.select img, #floatingtoolbar li#measure img {
-        display: none;
-    }
-    #floatingtoolbar li.gmlayer, #floatingtoolbar li.pan, #floatingtoolbar li#measure {
-        display: block;
-        height: 22px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 22px 22px;
-    }
-    #floatingtoolbar li.pan {
-        height: 23px;
+    #floatingtoolbar li#diceroller div[data-toggle-type="inline"],
+    #floatingtoolbar li#diceroller div[data-group="exploding"],
+    #floatingtoolbar li#diceroller div.quickdice-button {
+        width: 30px;
     }
     .submenu ul + ul {
         transform: translate(0, 5px);
     }
-    #floatingtoolbar li.gmlayer div.submenu li.choosegmlayer, #floatingtoolbar li.objects div.submenu li.choosegmlayer, #floatingtoolbar li.map div.submenu li.choosegmlayer, #floatingtoolbar li.pan div.submenu li.choosepan, #floatingtoolbar li.select div.submenu li.choosepan, #floatingtoolbar li#measure div.submenu li[mode="snap_center"], #floatingtoolbar li#measure div.submenu li[mode="snap_corner"], #floatingtoolbar li#measure div.submenu li[mode="no_snap"], #floatingtoolbar li#measure div.submenu li[mode="show"], #floatingtoolbar li#measure div.submenu li[mode="hide"] {
+    
+    .submenu {
+        cursor: default;
+    }
+    
+    /* Putting vertical borders between the oclumns in the dice roller */
+    #floatingtoolbar li#diceroller div.submenu li.quickdice div {
+        border-right: 2px solid rgba(0,0,0,0.2);
+    }
+    #floatingtoolbar li#diceroller div.submenu li.quickdice div:last-of-type {
+        border-right: none !important;
+    }
+    .quickdice-button.basicroll {
+        border-radius: 999px;
+        margin-left: 0.1em;
+        max-width: 28px;
+        aspect-ratio: 1 / 1;
+        text-align: center;
+        border-right: none !important;
+        cursor: pointer;
+    }
+    .quickdice-button.basicroll:not(:hover):not(:active) {
+        color: rgba(255,255,255,0.3);
+    }
+    
+    #diceroller > .submenu > ul {
+        background-color: #373a52 !important;
+    }
+    .quickdice,
+    .dicerollermenu {
+        margin-left: 0.2em !important;
+        margin-right: 0.2em !important;
+    }
+    .quickdice:first-child {
+        margin-bottom: 1em !important;
+        border-radius: 5px;
+    }
+    .quickdice:nth-child(2) {
+        border-radius: 5px 5px 0 0;
+    }
+    .quickdice:nth-last-child(2) {
+        border-radius: 0 0 5px 5px;
+        margin-bottom: 1em !important;
+    }
+    
+    .quickdice {
+        background-color: rgba(0,0,0,0.2);
+    }
+    
+    
+    .quickdice:first-child {
+        display: flex !important;
+        background-color: transparent !important;
+        font-weight: bold;
+        position: relative;
+        margin-top: 1.2em !important;
+    }
+    .quickdice:first-child::after {
+        content: 'Options';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 80%;
+        transform: translate(0, -90%) !important;
+    }
+    
+    
+    .quickdice:nth-child(2) {
+        position: relative;
+        margin-top: 2em !important;
+    }
+    .quickdice:nth-child(2)::after {
+        content: 'Dice Table';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 80%;
+        transform: translate(0, -92%) !important;
+        font-weight: bold;
+    }
+    
+    
+    .quickdice:first-child:hover {
+        color: #fff !important;
+    }
+    .quickdice:first-child > * {
+        all: unset !important;
+        background-color: rgba(0,0,0,0.2) !important;
+        flex-basis: 100px !important;
+        text-align: center !important;
+        border-right: 2px solid rgba(0,0,0,0.2) !important;
+        cursor: pointer !important;
+    }
+    .quickdice:first-child > *:first-child,
+    .quickdice:first-child > *:nth-child(2) {
+        border-radius: 5px 5px 5px 5px !important;
+        margin-right: 0.5em !important;
+        border-right: none !important;
+    }
+    .quickdice:first-child > *:last-child {
+        border-radius: 0 5px 5px 0 !important;
+    }
+    .quickdice:first-child > *:nth-child(3) {
+        border-radius: 5px 0 0 5px !important;
+    }
+    .quickdice:first-child > *:hover {
+        background-color: var(--color-button-main-tr2) !important;
+    }
+    .quickdice:first-child > *[data-toggle="true"] {
+        background-color: var(--color-button-main) !important;
+    }
+    
+    
+    
+    .dicerollermenu {
+        border-radius: 5px;
+        position: relative;
+        margin-bottom: 0.3em !important;
+    }
+    .dicerollermenu:not(:hover) {
+        background-color: var(--color-button-main-tr2) !important;
+    }
+    .dicerollermenu > span {
+        width: 10px !important;
+    }
+    .dicerollermenu::after {
+        content: '›';
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-55%);
+    }
+    
+    
+    
+    
+/*                                             */
+/*--------------- Custom icons ----------------*/
+/*                                             */
+    
+    /* Making icons in the floating sidebar transparent */
+    #floatingtoolbar > ul > li > img,
+    #floatingtoolbar > ul > li > span {
+        opacity: 0 !important;
+        display: block;
+        height: 22px;
+        width: 22px;
+    }
+    
+    /* Sizing for new background-images in the floating sidebar */
+    #floatingtoolbar > ul > li {
         background-repeat: no-repeat;
-        background-size: 22px 22px;
-        background-position: 2px 3px;
-        padding-left: 27px;
+        background-size: auto 60%;
+        background-position: center;
     }
-    #floatingtoolbar li.gmlayer, #floatingtoolbar li.gmlayer div.submenu li.choosegmlayer, #floatingtoolbar li.objects div.submenu li.choosegmlayer, #floatingtoolbar li.map div.submenu li.choosegmlayer {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFASURBVGhD7ZW7bsMwDEWdjhmd/v8XNhkzFzJIgbJevKQaAwXPYHmwyHOpCNmCIAiCIAC40erm5/l+0uuQ78f9Qa8uXOIn2Z3WGS9aXSFM4kJYK9vjCGEJAIkrhfNET0z3IAFU4ohwr/mKGpKpODVcNi1tgFm9obhGutVAyB0MvjHLd8UVhRNF8cE0q1Ox1Jc0xR3Sf76H+aI1oyxWAOzZ6VuE5p5CHBDoHiEC1Th+RhMq+WriKEBYxjL1iixuEPg0RWD3xK8iiwO/t6so7pV74obASy52Ie655RaAe1WFrSZumCCyxzLt5p7/9ZfPKIo3C4sAB4Nv4NrMUDyhaZAeoyYSEcosnZiKJ7TN0qPXcEUNiUqcQZo3WHZqCUicUQbQAAszJnFGBEhoQ+QTsQgzLnHJKUQXj2wQBEEQBDa27RfFhtUkmTPwDwAAAABJRU5ErkJggg==");
-        padding-left: 34px;
+    
+    /* Making icons in sub-menus disappear */
+    #floatingtoolbar .submenu > ul > li:not(.quickdice):not(.dicerollermenu) > *:first-child {
+        display: none !important;
     }
-    #floatingtoolbar li.pan, #floatingtoolbar li.pan div.submenu li.choosepan, #floatingtoolbar li.select div.submenu li.choosepan {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ/SURBVGhD7ZpLb9QwFIWnA7T0AYuWVuyQWPL/fwwbNmwQ0AohUMujtJyTOYkSz40fsSd1pXyS5ZvMTOLPr8TJrBbiObm8ur5nQny82VWePeW7YI3C/1M84NXZUfHz7krkGST+KI4iV66kyAUK/1nxJCBziOzXZiuNEiJ7ELhTbNLWtsaJl6kts1Y+mZDEXOSKXCifBGp/7bZATKtZZIm4Y4KFSuwaZqEp0ybtCpLdtXaNZILlrF6EQMa8HvV5FCLipXKTKkWssYZW+a7Q5DG1iJdFpDYWkdpYRGpjEamNkAivruftnWibtH8UXJW72wnEbxQy5gqwAfFrhUUI3XK/RcE/KB6AgnBd/lebDdjXHo/5KRIr6gqpv/jiGuYJ0qdma8MpjsXvNcdFdstYldbRO/4WXhH3QCF8JwrA350jPUf6yB0kRWS0a6VKZMJzfUHqJFKJHuysjYwa3znJsxZkkn8zB1MKdQ8ZDtaqGBVxu5EzZu7w+ZHiKsjpJjeQeaf4wfGKuF3ImMne4zvNsy23Becm1CLWU8R+gSn29aElSLBroZCD76BVqnhE6hIzRqwLY3fPVAsxItYMdq2wGqJECGTc12b7yqsgWgQMXsCgVX4rnAVU5IlCkxQRXgR5a95hTMfFMI59o9wkRYR8U95nrqnXO1umilgDnyd4utkqxoHyBpzT+wCbJIsQHHgw0CEzWClmwneS7gvRH8pHmSQCtgpearyohTtQaS8UepkqstXFiGS4XJ3C/khl/FTuJXug+lrCkjUY/XMBfs+b1qhboiIzjk9mKikSpIiIOIZQVDfwAQEuCy6RkiqnpEhDTutEdkWT4iIO0X/vWGhYrf4DVBva1pof3a4AAAAASUVORK5CYII=");
-        padding-left: 34px;
+    
+    /* Sizing for new background-images in sub-menus */
+    #floatingtoolbar .submenu > ul > li:not(.quickdice):not(.dicerollermenu) {
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 7px center;
+        padding-left: 35px !important;
+        padding-right: 11px;
     }
-    #floatingtoolbar li#measure, #floatingtoolbar li#measure div.submenu li[mode="no_snap"] {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURUdwTOzt9oDcdx0AAAABdFJOUwBA5thmAAAAYUlEQVRIx+3VMQoAIQxE0fz7X3pZxEph54PCFkn9EJMppioYKDFgPBgPxoPxcM+/IvdDpH6KjLNOvOX324tXW5779039t5t08p1lZ7nlx26y8aofcH3i2s11p2tm1/sJewAJngKnK3n4NQAAAABJRU5ErkJggg==");
+    
+    /* Hiding and re-sizing the old icons in the sidebar nav-tabs */
+    .ui-tabs-nav > li > a {
+        opacity: 0;
+        display: block;
+        height: 32px;
+        width: 32px;
+        position: relative;
     }
-    #floatingtoolbar li#measure div.submenu li[mode="snap_center"] {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuAQMAAABtd7l0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURUdwTOzt9oDcdx0AAAABdFJOUwBA5thmAAAAwUlEQVQY0z3QIU4FMRRA0TuZhBqSsSi6BXC4bmtcywrYUlFItjCEDfS7ipdexE9Qxx+gjEdgcz0DyVWAbJQG1Zk76O3jYtPf78GuX06SIxkctt3gWLw6ycHpIE/CizLQTrmoNmp/KD5R+1HWG7Vl48RWnIGteAsk+xPI4WcgyfdAdrdAtrUFQtw5t8DGyx7UBvv8p0OalA5pUC44BnlAvsgTysURUDvHAjvJttvYHVnY1AWoAVSdQNYLSNruWQCUAX+2mowyzKOWDQAAAABJRU5ErkJggg==");
-        padding-left: 34px;
+    
+    /* Creating ::after pseudoelements to display the new icons for the sidebar nav-tabs */
+    .ui-tabs-nav > li::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: auto 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        pointer-events: none;
     }
-    #floatingtoolbar li#measure div.submenu li[mode="snap_corner"] {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURUdwTOzt9oDcdx0AAAABdFJOUwBA5thmAAAAa0lEQVRIx+3UQQrAIAxE0fz7X1poN2ITmQGzKJj1MzgJGiEUhFHgeLA8ff5Rsn8Vomcpk3Ou/ZxS0R8v7FK8OGbM5pRYKXt050wSL7+fROfByt7svTC2yYfEKT8jNj4crq78IC9OX375L/gAv/ICe55GR74AAAAASUVORK5CYII=");
-        padding-left: 34px;
+    
+    /* Config for the special icons in the radial menu buttons */
+    #radial-menu > .button-1 > .inner > span,
+    #radial-menu > .button-2 > .inner > span {
+        opacity: 0 !important;
     }
-    #floatingtoolbar li#measure div.submenu li[mode="show"] {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURUdwTOzt9oDcdx0AAAABdFJOUwBA5thmAAAAnUlEQVRIx7WWSQ6AMAgAO///tInxYAoUxkRu0AlFyuJaA4ElBAwPhgfDg+L5j7+JMf8QkjfhQ0PvpyeaTd7GCo5KRgcnL0Og0xu7oJ2ZvcI5XUqj7OmLeU6SnmY5qJ3zwj0znG+4DMZ+qkykfSZbBLbEXAHTtUfG182XzKq6tYvZM5m57dw5DhYkLnkXjtoP/LCu5DK0q9Yu8ulvwgVjsALyGFkXCgAAAABJRU5ErkJggg==");
-        padding-left: 34px;
+    #radial-menu > .button-1 > .inner,
+    #radial-menu > .button-2 > .inner {
+        background-repeat: no-repeat !important;
     }
-    #floatingtoolbar li#measure div.submenu li[mode="hide"] {
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURUdwTOzt9oDcdx0AAAABdFJOUwBA5thmAAAAzUlEQVRIx6WW2w6AIAxD1///aROjguu6S+DJwBHKWkGzRgNs0IAJD0x4gPjkbYD4bDUwjxkPxd99bf7pG/JSPlLp+/Dq8KMRvfE8X7j04lmf2pgQyKFEtGhWgQH/3+ZaHMU2twfJb3XzvLboN/7pEXlnU8T0wvXHLxXHV4yrHvT0r3+BtkS7s78sTZRPeZiEfHb4MF+ml/PQ5o3Dnn8eEe/8kds0DpQsyxoIXNcWoVMB+JbzOOQrPRXtr4uK9rGpaB+bij67aqcXefc34QIjaANcoErBQAAAAABJRU5ErkJggg==");
-        padding-left: 34px;
+    #radial-menu > .button-1 > .inner {
+        background-size: auto 70% !important;
+        background-position: center 6px !important;
     }
+    #radial-menu > .button-2 > .inner {
+        background-size: auto 65% !important;
+        background-position: center 7px !important;
+    }
+    
+    
+    .submenu .quickdice-label span.rolltype {
+        color: transparent;
+        display: inline-block;
+        width: 20px;
+        height: 100%;
+        margin-left: 5px;
+        background-repeat: no-repeat;
+        background-size: auto 49%;
+        background-position: center;
+    }
+    
+    
+    
+    
+    
+    
+    /* Dice D4 - regular */
+    .submenu .quickdice-label span.rolltype.dfontd4 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M505 289L281 12a32 32 0 00-50 0L7 289c-11 14-9 35 6 46l224 170a32 32 0 0019 7c7 0 14-2 19-7l224-170c15-11 17-32 6-46zM232 87v355L55 306 232 87zm48 355V87l177 219-177 136z'/%3E%3C/svg%3E");
+    }
+    
+    /* Dice D6 - regular */
+    .submenu .quickdice-label span.rolltype.dfontd6 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M432 116L240 4a31 31 0 00-32 0L16 116c-10 6-16 17-16 28v224c0 11 6 22 16 28l192 112a31 31 0 0032 0l192-112c10-6 16-17 16-28V144c0-11-6-22-16-28zM224 51l152 88-152 89-152-89 152-88zM48 181l152 89v177L48 359V181zm200 266V270l152-89v178l-152 88z'/%3E%3C/svg%3E");
+    }
+    
+    /* Dice D8 - regular */
+    .submenu .quickdice-label span.rolltype.dfontd8 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M502 232L280 10a34 34 0 00-48 0L10 232a34 34 0 000 48l222 222a34 34 0 0048 0l222-222c13-13 13-35 0-48zM280 78l166 166-166 72V78zm-48 238L66 244 232 78v238zm0 52v66L116 318l116 50zm48 0l116-50-116 116v-66z'/%3E%3C/svg%3E");
+    }
+    
+    /* Dice D10 - regular */
+    .submenu .quickdice-label span.rolltype.dfontd10 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M504 261L280 11a32 32 0 00-48 0L8 261a32 32 0 003 46l224 197a32 32 0 0042 0l224-197c13-12 15-33 3-46zm-248 27l-66-44 66-154 66 154-66 44zm-113-56l-57 14 97-109-40 95zm13 47l76 51v107L75 299l81-20zm124 51l76-51 81 20-157 138V330zm89-98l-40-95 97 109-57-14z'/%3E%3C/svg%3E");
+    }
+    
+    /* Dice D12 - regular */
+    .submenu .quickdice-label span.rolltype.dfontd12 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M509 185L453 74a32 32 0 00-15-15L327 3a32 32 0 00-15-3H200l-15 3L74 59a32 32 0 00-15 15L3 185a32 32 0 00-3 15v112l3 15 56 111a32 32 0 0015 15l111 56 15 3h112l15-3 111-56a32 32 0 0015-15l56-111 3-15V200l-3-15zm-54 0l-78 105-97-49v-93l141-28-1-5 35 70zM301 464h-90l-53-132 98-49 98 49-53 132zM203 48h106l64 32-117 24-117-24 64-32zM92 115l-1 5 141 28v93l-97 49-78-105 35-70zM48 309v-56l59 79 42 105-49-25-52-103zm364 103l-49 25 42-105 59-79v56l-52 103z'/%3E%3C/svg%3E");
+    }
+    
+    /* Dice D20 - regular */
+    #floatingtoolbar li#diceroller,
+    .submenu .quickdice-label span.rolltype.dfontd20 {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M432 116L240 4a31 31 0 00-32 0L16 116c-10 6-16 17-16 28v224c0 11 6 22 16 28l192 112a31 31 0 0032 0l192-112c10-6 16-17 16-28V144c0-11-6-22-16-28zM224 88l72 96H152l72-96zm0 251l-68-107h136l-68 107zm-111-85l63 100-83-19 20-81zm222 0l20 81-83 19 63-100zm16-77l-70-93 106 62-36 31zm-254 0l-36-31 106-62-70 93zm-25 43l-24 97V198l24 22zm128 189v38L90 383l110 26zm48 0l110-26-110 64v-38zm152-92l-24-97 24-22v119z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
+    
+    
+    
+    /* Chat bubbles - regular */
+    .ui-tabs-nav > li#textchattab::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23ffffff' d='M512 160h-96V64c0-35-29-64-64-64H64C29 0 0 29 0 64v160c0 35 29 64 64 64h32v52a12 12 0 0019 10l77-44v78c0 35 29 64 64 64h96l109 62 7 2c6 0 12-5 12-12v-52h32c35 0 64-29 64-64V224c0-35-29-64-64-64zM96 240H64c-9 0-16-7-16-16V64c0-9 7-16 16-16h288c9 0 16 7 16 16v160c0 9-7 16-16 16H211l-11 6-56 32v-38H96zm432 144c0 9-7 16-16 16h-80v38l-56-32-11-6H256c-9 0-16-7-16-16v-96h112c35 0 64-29 64-64v-16h96c9 0 16 7 16 16v160z'/%3E%3C/svg%3E");
+    }
+    
+    /* Handouts - regular */
+    .ui-tabs-nav > li:nth-of-type(2)::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23ffffff' d='M296 400h-80c-4 0-8 4-8 8v16c0 4 4 8 8 8h80c4 0 8-4 8-8v-16c0-4-4-8-8-8zM80 240v96c0 9 7 16 16 16h192c9 0 16-7 16-16v-96c0-9-7-16-16-16H96c-9 0-16 7-16 16zm32 16h160v64H112v-64zM370 98l-84-84c-9-9-21-14-34-14H48C22 0 0 22 0 48v416c0 27 22 48 48 48h288c26 0 48-21 48-48V132c0-13-5-25-14-34zM256 52l76 76h-76V52zm80 412H48V48h160v104c0 13 11 24 24 24h104v288zM88 112h80c4 0 8-4 8-8V88c0-4-4-8-8-8H88c-4 0-8 4-8 8v16c0 4 4 8 8 8zm0 64h80c4 0 8-4 8-8v-16c0-4-4-8-8-8H88c-4 0-8 4-8 8v16c0 4 4 8 8 8z'/%3E%3C/svg%3E");
+    }
+    
+    /* Info circle - regular */
+    .ui-tabs-nav > li#compendiumtab::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M256 8a248 248 0 100 496 248 248 0 000-496zm0 448a200 200 0 110-400 200 200 0 010 400zm0-338a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v100h12c7 0 12 5 12 12v24z'/%3E%3C/svg%3E");
+    }
+    
+    /* Music - regular */
+    .ui-tabs-nav > li#jukeboxtab::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M480 0a32 32 0 00-10 2L166 98a32 32 0 00-22 30v235a110 110 0 00-48-11c-53 0-96 36-96 80s43 80 96 80c49 0 90-31 95-71a39 39 0 001-9V256l272-86v129a110 110 0 00-48-11c-53 0-96 36-96 80s43 80 96 80c49 0 90-31 95-71a39 39 0 001-8V32a32 32 0 00-32-32zM96 464c-28 0-48-17-48-32s20-32 48-32 48 17 48 32-20 32-48 32zm368-96c0 15-20 32-48 32s-48-17-48-32 20-32 48-32 48 17 48 32zm0-248l-272 86v-66l272-86z'/%3E%3C/svg%3E");
+    }
+    
+    /* Hashtag - regular */
+    .ui-tabs-nav > li:nth-of-type(5)::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M444 190l4-24c1-7-5-14-12-14h-89l19-106c1-7-4-14-12-14h-24a12 12 0 00-12 10l-20 110H187l19-106c1-7-4-14-12-14h-24a12 12 0 00-12 10l-20 110H45a12 12 0 00-12 10l-4 24c-2 7 4 14 12 14h89l-20 112H16a12 12 0 00-12 10l-4 24c-1 7 5 14 12 14h89L82 466c-1 7 4 14 12 14h24a12 12 0 0012-10l20-110h111l-19 106c-1 7 4 14 12 14h24a12 12 0 0012-10l20-110h93a12 12 0 0012-10l4-24c2-7-4-14-12-14h-89l20-112h94a12 12 0 0012-10zM270 312H158l20-112h112l-20 112z'/%3E%3C/svg%3E");
+    }
+    
+    /* Cog - regular */
+    .ui-tabs-nav > li:nth-of-type(6)::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M453 237l31-18c10-6 14-17 12-27-12-43-34-81-65-111-7-8-19-9-29-4l-31 18a196 196 0 00-33-19V40a24 24 0 00-18-24c-42-11-86-11-128 0-10 3-18 13-18 24v36a196 196 0 00-33 19l-31-18c-10-5-22-4-29 4-31 30-53 68-65 111-2 10 2 21 12 27l31 18a198 198 0 000 38l-31 18c-10 6-14 17-12 27 12 43 34 81 65 111 7 8 19 9 29 4l31-18a196 196 0 0033 19v36a24 24 0 0018 24c42 11 86 11 128 0 10-3 18-13 18-24v-36a196 196 0 0033-19l31 18c10 5 22 4 29-4 31-30 53-68 65-111 2-10-2-21-12-27l-31-18v-38zm-53 63l44 25a200 200 0 01-34 59l-44-25c-32 27-37 30-76 44v50a201 201 0 01-68 0v-50c-39-14-44-17-76-44l-44 25a200 200 0 01-34-59l44-25c-7-41-7-47 0-88l-44-25c8-22 20-41 34-59l44 25c32-27 37-30 76-44V59a201 201 0 0168 0v50c39 14 44 17 76 44l44-25a200 200 0 0134 59l-44 25c7 41 7 47 0 88zM256 160a96 96 0 100 192 96 96 0 000-192zm0 144a48 48 0 110-96 48 48 0 010 96z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
+    
+    /* Mouse cursor - solid */
+    #floatingtoolbar li.select,
+    #floatingtoolbar li.chooseselect {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23ffffff' d='M302 329H196l56 136c4 10-1 20-10 24l-49 22c-9 4-19-1-23-10l-53-129-87 89c-11 12-30 3-30-13V18C0 2 20-6 30 5l285 293c11 11 3 31-13 31z'/%3E%3C/svg%3E");
+    }
+    
+    /* Grab hand - solid */
+    #floatingtoolbar li.pan,
+    #floatingtoolbar li.choosepan {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M409 128c-23 0-41 18-41 41v87h-8V80c0-23-18-41-41-41-22 0-39 18-39 40v177h-8V41c0-23-18-41-41-41-22 0-39 18-39 40v216h-8V81c0-23-18-41-41-41-22 0-39 18-39 40v236l-32-44a40 40 0 10-64 48l125 172a48 48 0 0039 20h198c22 0 41-15 46-37l27-113a192 192 0 005-44V168c0-22-17-40-39-40z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
+    
+    
+    
+    /* Palette - solid */
+    dummy {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M204 5C105 24 25 104 5 203c-37 187 132 327 259 307 41-6 61-54 43-92a68 68 0 0160-98h80c36 0 65-30 65-65C512 97 368-27 204 5zM96 320a32 32 0 110-64 32 32 0 010 64zm32-128a32 32 0 110-64 32 32 0 010 64zm128-64a32 32 0 110-64 32 32 0 010 64zm128 64a32 32 0 110-64 32 32 0 010 64z'/%3E%3C/svg%3E");
+    }
+    
+    /* Draw Square - solid */
+    #floatingtoolbar li.rect,
+    #floatingtoolbar li.chooserect {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M416 361V151a64 64 0 10-87-87H119a64 64 0 10-87 87v210a64 64 0 1087 87h210a64 64 0 1087-87zm-320 0V151a64 64 0 0023-23h210a64 64 0 0023 23v210a64 64 0 00-23 23H119a64 64 0 00-23-23zM400 96a16 16 0 11-32 0 16 16 0 0132 0zM64 80a16 16 0 110 32 16 16 0 010-32zM48 416a16 16 0 1132 0 16 16 0 01-32 0zm336 16a16 16 0 110-32 16 16 0 010 32z'/%3E%3C/svg%3E");
+    }
+    
+    /* Free draw paintbrush - solid */
+    #floatingtoolbar li.path,
+    #floatingtoolbar li.choosepath {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M366 33L194 290l78 65 219-222c73-80-63-188-125-100zM168 309c-41 3-77 18-98 73-3 6-8 10-15 10-11 0-45-28-55-35 0 83 38 155 128 155 76 0 128-44 128-120l-1-10-87-73z'/%3E%3C/svg%3E");
+    }
+    
+    /* Draw line - solid */
+    #floatingtoolbar li.polygon,
+    #floatingtoolbar li.choosepolygon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M400 354l-33-110c9-12 14-26 14-41a64 64 0 00-128-1l-91 52-16-7-34-108a64 64 0 10-63 19l34 109a64 64 0 10112 44l92-52c6 3 11 5 18 6l32 108a64 64 0 1063-19zM48 96c0-9 7-16 16-16s16 7 16 16-7 16-16 16-16-7-16-16zm83 229c-9 0-16-7-16-16 0-8 7-16 16-16 8 0 16 8 16 16 0 9-7 16-16 16zm170-122c0-9 8-16 16-16 9 0 16 7 16 16 0 8-7 16-16 16-8 0-16-7-16-16zm83 229c-9 0-16-7-16-16s7-16 16-16 16 7 16 16-7 16-16 16z'/%3E%3C/svg%3E");
+    }
+    
+    /* Type text - solid */
+    #floatingtoolbar li.text,
+    #floatingtoolbar li.choosetext {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath fill='%23ffffff' d='M256 52V12c0-7-5-12-12-12-32 0-78 0-116 38C90 1 47 0 12 0 5 0 0 6 0 12v40c0 6 5 12 12 12 26-1 84 3 84 48v112H60c-7 0-12 5-12 12v40c0 7 5 12 12 12h36v112c0 45-56 48-84 48-7 0-12 5-12 12v40c0 7 5 12 12 12 32 0 78 0 116-38 38 37 81 38 116 38 7 0 12-6 12-12v-40c0-6-5-12-12-12-26 1-84-3-84-48V288h36c7 0 12-5 12-12v-40c0-7-5-12-12-12h-36V112c0-45 56-48 84-48 7 0 12-5 12-12z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
+    
+    
+    
+    /* Magnifying glass - solid */
+    #floatingtoolbar li#zoompanel {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M304 192v32c0 7-5 12-12 12h-56v56c0 7-5 12-12 12h-32c-7 0-12-5-12-12v-56h-56c-7 0-12-5-12-12v-32c0-7 5-12 12-12h56v-56c0-7 5-12 12-12h32c7 0 12 5 12 12v56h56c7 0 12 5 12 12zm201 285l-28 28c-10 9-25 9-34 0L343 405c-4-4-7-10-7-17v-16a208 208 0 1136-36h16c7 0 13 3 17 7l100 100c9 9 9 24 0 34zM344 208a136 136 0 10-272 0 136 136 0 00272 0z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
+    
+    
+    
+    /* Ruler - solid */
+    #floatingtoolbar li#measure {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23ffffff' d='M636 167L556 32c-9-15-28-20-43-12l-69 39 59 102c3 4 1 9-3 11l-13 7c-4 3-9 1-11-2L416 75l-55 31 28 48c2 3 1 8-3 10l-14 8c-4 2-9 1-11-3l-28-47-55 31 60 102c2 4 1 9-3 11l-14 7c-4 3-9 1-11-2l-59-102-56 31 28 48c2 3 1 8-3 10l-13 8c-4 2-9 1-11-3l-28-47-55 31 59 102c2 3 1 8-3 10l-13 8c-4 2-9 1-11-3L85 263l-69 39c-15 9-21 28-12 43l80 135c9 15 28 20 43 12l497-282c15-9 21-28 12-43z'/%3E%3C/svg%3E");
+    }
+    
+    /* Snap to center - solid */
+    #floatingtoolbar li[mode="snap_center"] {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M320 261a64 64 0 00-61-17L126 112a64 64 0 10-47 46l133 133a64 64 0 10108-30zM53 107c-7-6-7-16 0-22s16-6 22 0 6 16 0 22-16 7-22 0zm233 211c-7 6-17 6-23 0s-6-17 0-23 16-6 23 0 6 16 0 23zm-7 157c-4 0-8-3-7-7l1-31c0-4 3-7 7-7a112 112 0 0033-5c4-2 7 0 9 4l11 28c2 4 0 8-4 10a153 153 0 01-50 8zm-55-8c-16-5-32-12-46-23-3-2-4-6-1-10l19-24c3-3 7-3 10-1 9 7 19 12 30 15 3 1 5 5 5 8l-8 30c-1 4-5 7-9 5zm143-27l-17-26c-2-3-1-7 2-9 9-7 17-15 24-24 2-3 6-4 9-2l26 17c4 2 4 6 2 9-10 14-22 27-36 37-3 2-7 1-10-2zm-227-33c-11-14-19-30-24-46-1-4 1-8 5-9l30-8c3-1 7 1 8 5 4 10 9 20 16 29 2 3 1 7-1 10l-24 20c-3 2-8 2-10-1zm253-143c-4-11-9-20-16-30-2-2-2-7 1-9l24-20c3-3 8-2 10 1 11 14 19 29 24 46 1 3-1 7-5 9l-30 8c-3 1-7-1-8-5zm-47-60c-9-7-19-12-30-15-3-1-6-5-5-8l8-31c1-3 5-6 9-5 16 5 32 13 46 23 3 3 3 7 1 10l-19 25c-3 2-7 3-10 1zm-116-20l-11-29c-2-3 0-8 4-9a154 154 0 0150-8c4 0 8 3 7 7l-1 31c0 4-3 7-7 7h-6c-9 0-18 2-27 5-4 1-7 0-9-4zm165 158c3-11 5-22 5-33 0-4 2-7 6-7l31-3c4 0 8 3 8 7 0 17-2 34-8 51-1 4-5 6-9 4l-29-11c-3-1-5-5-4-8zm-288-35c0-18 2-35 8-51 1-4 5-6 9-4l29 11c3 1 5 5 4 9-3 10-5 21-5 33 0 3-3 6-7 7l-31 2c-4 0-7-3-7-7z'/%3E%3C/svg%3E");
+    }
+    
+    /* Snap to corner - solid */
+    #floatingtoolbar li[mode="snap_corner"] {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 448 512' xml:space='preserve'%3E%3Cpath style='fill:%23fff' d='M280 221a64 64 0 00-60-17l-93-93a64 64 0 10-47 47l93 93a64 64 0 10107-30zM54 107c-7-6-7-16 0-22s16-7 22 0c6 6 6 16 0 22-6 7-16 7-22 0zm192 171c-6 6-16 6-22 0s-6-17 0-23 16-6 22 0 7 16 0 23zm119 16h-28c-6 0-10-4-10-10v-39c0-6 4-10 10-10h28c5 0 10 4 10 10v39c0 6-5 10-10 10zm72 0h-28c-6 0-10-4-10-10v-39c0-6 4-10 10-10h28c6 0 10 4 10 10v39c0 6-4 10-10 10zm-224 64h40c5 0 10 4 10 10v28c0 6-5 10-10 10h-40c-5 0-10-4-10-10v-28c0-6 5-10 10-10zm0 72h40c5 0 10 5 10 10v28c0 6-5 10-10 10h-40c-5 0-10-4-10-10v-28c0-5 5-10 10-10z'/%3E%3C/svg%3E");
+    }
+    
+    /* No snapping - solid */
+    #floatingtoolbar li[mode="no_snap"] {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 448 512' xml:space='preserve'%3E%3Cpath style='fill:%23fff' d='M409 340a64 64 0 00-60-17L146 120a64 64 0 10-47 47l203 202a64 64 0 10107-29zM73 116c-7-6-7-16 0-23s16-6 22 0 6 17 0 23-16 6-22 0zm303 280c-7 6-17 6-23 0s-6-16 0-22 16-7 22 0 7 16 1 22z'/%3E%3C/svg%3E");
+    }
+    
+    /* Visible - solid */
+    #floatingtoolbar li.gmlayer,
+    #floatingtoolbar li.choosegmlayer,
+    #floatingtoolbar li[mode="show"] {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23ffffff' d='M573 241C518 136 411 64 288 64S58 136 3 241a32 32 0 000 30c55 105 162 177 285 177s230-72 285-177a32 32 0 000-30zM288 400a144 144 0 11144-144 144 144 0 01-144 144zm0-240a95 95 0 00-25 4 48 48 0 01-67 67 96 96 0 1092-71z'/%3E%3C/svg%3E");
+    }
+    
+    /* Hidden - solid */
+    #floatingtoolbar li[mode="hide"] {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23ffffff' d='M320 400c-76 0-137-59-143-133L72 186c-14 17-26 35-37 55a32 32 0 000 30 321 321 0 00363 167l-52-41a144 144 0 01-26 3zm314 58l-111-85a331 331 0 0082-102 32 32 0 000-30A321 321 0 00320 64a308 308 0 00-147 38L45 3a16 16 0 00-22 3L3 31a16 16 0 003 23l589 455a16 16 0 0022-3l20-25a16 16 0 00-3-23zM450 316l-39-30a95 95 0 005-30 95 95 0 00-121-92 48 48 0 019 28 47 47 0 01-2 10l-73-57a142 142 0 0191-33 144 144 0 01144 144c0 22-5 42-14 60z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
+    
+    
+    
+    /* Dice D20 - solid */
+/*     dummy {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 512'%3E%3Cpath fill='%23ffffff' d='M107 215L1 371c-3 5 0 11 6 12l208 22-108-190zM7 315l76-122-77-46c-3-2-6 0-6 4v162c0 4 5 6 7 2zm11 109l195 87c5 3 11-1 11-7v-66L20 416c-4 0-6 6-2 8zm81-258l80-143c5-7-3-15-10-11L18 110c-3 2-3 6 0 7l81 49zm141 10h109L254 8c-3-5-9-8-14-8s-10 3-14 8l-95 168h109zm234-29l-77 46 76 122c2 4 7 2 7-2V151c0-4-3-5-6-4zm-93 19l81-49c3-1 3-5 0-7L311 12c-7-4-15 4-10 11l80 143zm79 250l-204 22v66c0 6 6 10 11 7l195-87c4-2 2-8-2-8zm-87-201L265 405l208-22c6-1 9-7 6-12L373 215zm-133-7H140l100 176 100-176H240z'/%3E%3C/svg%3E");
+    } */
+    
+    /* Dice D4 - solid */
+/*     dummy {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M225 3L2 309c-3 4-2 9 1 12l224 189c5 5 13 1 13-7V9c0-9-10-12-15-6zm285 306L287 3c-5-6-15-3-15 6v494c0 8 8 12 13 7l224-189c3-3 4-8 1-12z'/%3E%3C/svg%3E");
+    } */
+    
+    /* Dice D6 - solid */
+/*     dummy {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M422 110L256 9a62 62 0 00-64 0L26 110c-6 3-5 11 0 14l198 119 198-119c5-3 6-11 0-14zm14 45L240 271v224c0 13 13 21 24 15l152-93c20-12 32-34 32-57V162c0-7-7-11-12-7zM0 162v198c0 23 12 45 32 57l152 93c11 6 24-2 24-15V271L12 155c-5-4-12 0-12 7z'/%3E%3C/svg%3E");
+    } */
+    
+    /* Dice D8 - solid */
+/*     dummy {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M226 3L2 234c-4 4-2 12 3 14l235 85V8c0-7-9-11-14-5zm284 231L286 3c-5-6-14-2-14 5v325l235-85c5-2 7-10 3-14zM34 310l192 199c5 6 14 2 14-5V368L42 297c-8-3-15 7-8 13zm436-13l-198 71v136c0 7 9 11 14 5l192-199c7-6 0-16-8-13z'/%3E%3C/svg%3E");
+    } */
+    
+    /* Dice D10 - solid */
+/*     dummy {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M11 255l130-27 68-212c3-10-8-16-14-9L3 241c-5 6 0 16 8 14zm360-27l130 27c8 2 13-8 8-14L317 7c-6-7-17-1-14 9l68 212zM264 6c-3-8-13-8-16 0l-73 230 81 57 81-57L264 6zm241 286l-144-30-88 62v179c0 8 8 12 14 7l222-202c5-5 3-14-4-16zM7 292c-7 2-9 11-4 16l222 202c6 5 14 1 14-7V324l-88-62L7 292z'/%3E%3C/svg%3E");
+    } */
+    
+    /* Dice D12 - solid */
+/*     dummy {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M256 274l-109 54 59 184h100l59-184-109-54zm16-28l109 55 123-124-51-103-181 65v107zm-32 0V139L59 74 8 177l123 124 109-55zM422 51L334 7a64 64 0 00-29-7h-98c-10 0-20 2-29 7L90 51l166 60 166-60zm-24 278l-55 171 86-42a64 64 0 0029-29l47-95a64 64 0 007-29v-90L398 329zM0 215v90c0 10 2 20 7 29l47 95a64 64 0 0029 29l86 42-55-171L0 215z'/%3E%3C/svg%3E");
+    } */
+    
+    
+    
+    
+    
+    
+    /* Questionmark - solid */
+    #floatingtoolbar li#helpsite {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23ffffff' d='M202 0C122 0 71 33 30 91c-7 11-5 25 5 33l43 33c11 7 25 6 33-5 26-31 44-49 83-49 31 0 69 20 69 50 0 22-19 34-49 51-35 20-82 44-82 106v10c0 13 11 24 24 24h72c13 0 24-11 24-24v-6c0-43 126-44 126-160C378 66 287 0 202 0zm-10 373a69 69 0 100 139 69 69 0 000-139z'/%3E%3C/svg%3E");
+    }
+    
+    /* Info circle - solid */
+    #floatingtoolbar li.showhelp {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M256 8a248 248 0 100 496 248 248 0 000-496zm0 110a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v100h12c7 0 12 5 12 12v24z'/%3E%3C/svg%3E");
+    }
+    
+    /* Shortcut keyboard - solid */
+    #floatingtoolbar li.showshortcuts {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23ffffff' d='M528 448H48c-27 0-48-21-48-48V112c0-27 21-48 48-48h480c27 0 48 21 48 48v288c0 27-21 48-48 48zM128 180v-40c0-7-5-12-12-12H76c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm96 0v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm96 0v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm96 0v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm96 0v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm-336 96v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm96 0v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm96 0v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm96 0v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm-336 96v-40c0-7-5-12-12-12H76c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12zm288 0v-40c0-7-5-12-12-12H172c-7 0-12 5-12 12v40c0 7 5 12 12 12h232c7 0 12-5 12-12zm96 0v-40c0-7-5-12-12-12h-40c-7 0-12 5-12 12v40c0 7 5 12 12 12h40c7 0 12-5 12-12z'/%3E%3C/svg%3E");
+    }
+    
+    /* Bug - solid */
+    #floatingtoolbar li.showbugs {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M512 289c0 17-15 31-33 31h-55v16c0 22-5 43-14 61l61 60a32 32 0 01-46 46l-54-55c-25 20-57 32-91 32V236c0-7-5-12-12-12h-24c-7 0-12 5-12 12v244c-34 0-66-12-91-32l-54 55a32 32 0 01-46-46l61-60c-9-18-14-39-14-61v-16H33c-18 0-33-14-33-31 0-18 14-33 32-33h56v-59l-47-46a32 32 0 0146-46l54 55h230l54-55a32 32 0 0146 46l-47 46v59h56c18 0 32 15 32 33zM257 0c-62 0-112 50-112 112h224C369 50 319 0 257 0z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
+    
+    
+    
+    /* Star - solid */
+    #radial-menu > .button-2 > .inner {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23ffffff' d='M259 18l-65 132-146 22c-26 3-37 36-18 54l106 103-25 146c-5 26 23 46 46 33l131-68 131 68c23 13 51-7 46-33l-25-146 106-103c19-18 8-51-18-54l-146-22-65-132a32 32 0 00-58 0z'/%3E%3C/svg%3E") !important;
+    }
+    
+    /* Cog - solid */
+    #radial-menu > .button-1 > .inner {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M487 316l-42-25c4-23 4-47 0-70l42-25c5-3 7-8 6-14-11-35-30-68-55-94-4-4-10-5-15-3l-42 25c-18-15-39-27-61-35V26c0-6-4-11-9-12-37-8-75-8-110 0-5 1-9 6-9 12v49c-22 8-43 20-61 35L89 86c-5-3-11-2-15 2-25 26-44 59-55 94-1 6 1 12 6 14l42 25c-4 23-4 47 0 70l-42 25c-5 3-7 8-6 14 11 35 30 68 55 94 4 4 10 5 15 3l42-25c18 15 39 27 61 35v49c0 6 4 11 10 12 36 8 74 8 109 0 5-1 9-6 9-12v-49c22-8 43-20 61-35l43 25c4 2 11 2 14-3 25-26 44-59 55-94 2-6-1-12-6-14zm-231 20a80 80 0 110-160 80 80 0 010 160z'/%3E%3C/svg%3E") !important;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /* -------------------------------- Secondary bar --------------------------- */
     #secondary-toolbar {
         opacity: 1;
@@ -2547,6 +2740,10 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
     }
+    
+    
+    
+    
     /* -------------------------------- Zoom bar -------------------------------- */
     #zoomclick {
         margin-right: 22px;
@@ -2608,6 +2805,10 @@
         left: -6px;
         box-shadow: 0px 0px 2px var(--color-text-disabled);
     }
+    
+    
+    
+    
     /* ------------------------------ Page Toolbar ------------------------------ */
     #page-toolbar {
         background-color: var(--color-floating-bar-bg);
@@ -2649,21 +2850,6 @@
         display: inline-block;
         width: 370px;
     }
-    /*#page-toolbar .pages .availablepage span {
-        font-size: 14px !important;
-        font-weight: 300 !important;
-        word-wrap: normal !important;
-        white-space: pre-wrap;
-        display: block !important;
-        height: 60px;
-        top: 130px;
-        left: -50px;
-        text-align: right !important;
-        align-content: center;
-        line-height: 1.2;
-        transform: rotate(-90deg);
-        width: 170px !important;
-    }*/
     #page-toolbar .pages .availablepage input {
         width: 80% !important;
         font-size: 14px !important;
@@ -2699,7 +2885,7 @@
     .fas.fa-times {
         color: var(--color-red)
     }
-    /*new version*/
+    
     #page-toolbar .pages .availablepage .page-actions {
         left: -8px !important;
         top: 56px !important;
@@ -2754,6 +2940,10 @@
     #page-toolbar .pages .availablepage .page-duplication .page-duplication__body .form-group {
         margin: 5px 0px;
     }
+    
+    
+    
+    
     /* ------------------------------- Playerzone ------------------------------- */
     #playerzone .player {
         box-shadow: 0px 0px 0px var(--color-text-disabled);
@@ -2776,6 +2966,10 @@
     #playerzone.namesonly .color_picker {
         border-radius: 3px;
     }
+    
+    
+    
+    
     /* -------------------------------- Macro box ------------------------------- */
     #macrobar {
         margin: 10px;
@@ -2807,6 +3001,20 @@
         background: none;
         padding-left: 5px;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /* -------------------------------------------------------------------------- */
     /*                                   Sidebar                                  */
     /* -------------------------------------------------------------------------- */
@@ -2852,6 +3060,10 @@
     #textchat-input {
         transform: scaleX(0.98);
     }
+    
+    
+    
+    
     /* -------------------------------- Tab Menu -------------------------------- */
     #rightsidebar ul.tabmenu {
         width: inherit !important;
@@ -2882,7 +3094,7 @@
         color: var(--color-text-primary);
         border-radius: 0px;
     }
-    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, #rightsidebar .ui-tabs-nav a {
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
         text-shadow: none;
         color: var(--color-text-primary) !important;
     }
@@ -2929,6 +3141,10 @@
         -webkit-animation: none;
         animation: none;
     }
+    
+    
+    
+    
     /* ----------------------------- Sidebar Control ---------------------------- */
     .fonticon-menu:before {
         font-family: var(--font-primary);
@@ -2962,6 +3178,10 @@
     #sidebarcontrol .fonticon-menu {
         margin-right: 3px;
     }
+    
+    
+    
+    
     /* -------------------------------- Settings -------------------------------- */
     #rightsidebar h1, #rightsidebar h2, #rightsidebar h3 {
         text-align: center;
@@ -2998,6 +3218,10 @@
     #rightsidebar .paddedtable td input {
         margin-right: 5px;
     }
+    
+    
+    
+    
     /* ------------------------------- Collection ------------------------------- */
     #rightsidebar .table-striped>tbody>tr:nth-of-type(odd) {
         background-color: var(--color-bg-light);
@@ -3031,6 +3255,10 @@
     #rightsidebar button.btn+h3 {
         display: block;
     }
+    
+    
+    
+    
     /* --------------------------------- Player --------------------------------- */
     #rightsidebar #jukebox .primarycontrols .btn:active, #jukebox .secondarycontrols .btn:active {
         background-image: none;
@@ -3241,6 +3469,10 @@
         border: 1px dashed var(--color-yellow) !important;
         color: var(--color-text-disabled);
     }
+    
+    
+    
+    
     /* ------------------------------- Compendiaum ------------------------------ */
     #compendium div.searchbox span a {
         top: 2px !important;
@@ -3334,6 +3566,10 @@
     .booktemplate .traits span, .booktemplate .actions span, .booktemplate .reactions span, .booktemplate .single-list span, .booktemplate .attributes span {
         color: var(--color-yellow);
     }
+    
+    
+    
+    
     /* --------------------------------- Journal -------------------------------- */
     #journal div.searchbox a.btn {
         padding: 5px 12px;
@@ -3426,6 +3662,10 @@
     div.dropbox.filled:hover {
         border: 1px dashed var(--color-red);
     }
+    
+    
+    
+    
     /* ------------------------------ Image Library ----------------------------- */
     #imagedialog .searchbox {
         background-color: var(--color-bg-light);
@@ -3527,6 +3767,17 @@
     .tagset .textboxlist-bit-editable-input {
         background: var(--color-bg-medium);
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /* -------------------------------------------------------------------------- */
     /*                                    Chat                                    */
     /* -------------------------------------------------------------------------- */
@@ -3559,6 +3810,8 @@
     #rightsidebar #textchat {
         height: calc(100% - 145px) !important;
     }
+    
+    
     /* -------------------------------- Messages -------------------------------- */
     .textchatcontainer .message {
         padding: 0 10px 10px;
@@ -3857,29 +4110,6 @@
     .sheet-rolltemplate-atk div.sheet-desc.sheet-info .sheet-top, .sheet-rolltemplate-atkdmg div.sheet-desc.sheet-info .sheet-top, .sheet-rolltemplate-dmg div.sheet-desc.sheet-info .sheet-top, .sheet-rolltemplate-desc div.sheet-desc.sheet-info .sheet-top, .sheet-rolltemplate-atk div.sheet-desc.sheet-info .sheet-bottom, .sheet-rolltemplate-atkdmg div.sheet-desc.sheet-info .sheet-bottom, .sheet-rolltemplate-dmg div.sheet-desc.sheet-info .sheet-bottom, .sheet-rolltemplate-desc div.sheet-desc.sheet-info .sheet-bottom {
         display: none;
     }
-    /*
-    .sheet-rolltemplate-simple div.sheet-container:hover,
-    .sheet-rolltemplate-skill div.sheet-container:hover,
-    .sheet-rolltemplate-atk div.sheet-container:hover,
-    .sheet-rolltemplate-atkdmg div.sheet-container.sheet-atk:hover,
-    .sheet-rolltemplate-dmg div.sheet-atk:hover,
-    .sheet-rolltemplate-dmg div.sheet-container:hover,
-    .sheet-rolltemplate-atkdmg div.sheet-container.sheet-damagetemplate:hover,
-    .sheet-rolltemplate-atk div.sheet-desc.sheet-info .sheet-middle:hover,
-    .sheet-rolltemplate-atkdmg div.sheet-desc.sheet-info .sheet-middle:hover,
-    .sheet-rolltemplate-dmg div.sheet-desc.sheet-info .sheet-middle:hover,
-    .sheet-rolltemplate-desc div.sheet-desc.sheet-info .sheet-middle:hover,
-    .sheet-rolltemplate-atk div.sheet-desc:hover,
-    .sheet-rolltemplate-atkdmg div.sheet-desc:hover,
-    .sheet-rolltemplate-dmg div.sheet-desc:hover,
-    .sheet-rolltemplate-desc div.sheet-desc:hover,
-    .sheet-rolltemplate-traits:hover,
-    .sheet-rolltemplate-npcaction div.sheet-container:hover,
-    .sheet-rolltemplate-npcatk:hover,
-    .sheet-rolltemplate-npcdmg:hover {
-        box-shadow: 0px 0px 10px var(--color-yellow);
-    }
-	*/
     .sheet-rolltemplate-default {
         border-radius: 5px;
         box-shadow: 0px 0px 2px var(--color-text-disabled);
@@ -4100,9 +4330,6 @@
     .sheet-rolltemplate-spelloutput .sheet-container .sheet-desconly {
         display: none;
     }
-    /*
-url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABOUExURUdwTOzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9nvqL5kAAAAZdFJOUwAZ/OsSf/CmTgrTULZv5QHiP1Q+zCuaWJXib9kOAAAAv0lEQVQ4y6WUSw6DMAwFnQCElP+v7bv/RUsLLFKi+EnMeqSRFccid3g1M+VVgB0Jz5cAWkJ0ADBR4Q2jennGif0vjMxzYTw0zwykuIeBRvFqe4iFMnEHTjzDQM1M/GVV3/jC4hPhgCIRTorxMJDlXBgVGXbx5bpQ/s/8JMPy5sIifqHCAWsiHK5aIhxQnF6Xc6KtlS1vuLDIY/cGQ4qVein2/+V67VKY+HJFTgAXFmmpiQ+x9IQ4Wiq8MbtJ7vABh1QoG+cdBuUAAAAASUVORK5CYII=")	
-	*/
     .sheet-rolltemplate-simple div.sheet-container .sheet-result span[original-title*="[INIT]"], .sheet-rolltemplate-simple div.sheet-container .sheet-result span[title*="[INIT]"] {
         width: 100%;
         left: -10px;
@@ -4131,6 +4358,17 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
         text-shadow: 0px 0px 20px, 0px 0px 20px !important;
         animation: var(--anim-numbers);
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /* -------------------------------------------------------------------------- */
     /*                                5e Charsheet                                */
     /* -------------------------------------------------------------------------- */
@@ -4802,138 +5040,12 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
         color: var(--color-text-primary);
         background-color: var(--color-element-bg);
     }
-    /* Inventory */
-    /*.charsheet .money {
-        width: 100% !important;
-        display: block !important;
-        margin-left: 5px !important;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .coin {
-        display: inline-block;
-        background-image: none !important;
-        background-color: var(--color-bg-light);
-        border-radius: 4px;
-        width: 45px;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .coin
-        .label {
-        background-position: 0px 0px;
-        left: -3px;
-        top: -5px;
-        line-height: 42px;
-        text-indent: 2px;
-        font-size: 6px;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .coin
-        input {
-        left: -3px;
-        top: 0px;
-        width: 26px;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .equipment
-        .weighttotal {
-        left: unset;
-        top: unset;
-    }
-    .charsheet
-        .container:not(.npc)
-        .equipment
-        .complex {
-        width: 96% !important;
-        padding: 5px;
-        margin-top: 30px;
-    }
-    .charsheet .container:not(.npc) .item .name {
-        width: 75%;
-    }
+    
+    
+    
 
-    .charsheet
-        .container:not(.npc)
-        .equipment
-        .header
-        span:nth-last-of-type(1) {
-        display: block;
-        width: 15px;
-        height: 15px;
-        float: right;
-        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABOUExURUdwTIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlFNgF1AAAAAZdFJOUwAUNUV34Ab6tYGuHtXvomOPJsNuLJlOyeoe7rvvAAAArUlEQVQYGX3ACZaCMBBF0Q8kqQSc57f/jTZKox6pcPUlhQc8QpIrZV5ykieA5WwQ5IlYJ3VGlGOArFGGQUsD9Br1MMgRsVZqjahfoZRyB3IG7qWUoC9HFo76CCwEfWQWst7SloVt0qzD0Wl2wHHQbINjo38NrkaTPa69JjtcO00Ml+mlpaLVU6Gi6OlExUmjxqiwRtKNqpukK1VXSZGqKF1YcdGZFWf1rOhlrLA/sh03526/DgwAAAAASUVORK5CYII=");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-    }
-    .charsheet .equipment .header span img {
-        display: none;
-    }
-    .charsheet .header span.pictos {
-        font-family: "Pictos" !important;
-    }
-    .charsheet .equipment .header span:nth-of-type(2) {
-        width: 75% !important;
-        text-align: center !important;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .equipment
-        .weighttotal {
-        width: 96%;
-        top: 38px;
-    }
-    .charsheet
-        .equipment
-        .weighttotal
-        span[data-i18n="total-weight-u"] {
-        display: block;
-        float: left;
-        width: 30%;
-        padding-top: 10px;
-        color: var(--color-text-secondary);
-    }
-    .charsheet .equipment .weighttotal input {
-        width: 40%;
-    }
-    .charsheet .equipment .encumb {
-        float: right;
-        width: 30%;
-        padding-top: 5px;
-    }
-    .charsheet .equipment .warning span,
-    .charsheet .charactermancer_options .warning span,
-    .charsheet .equipment .encumb {
-        color: var(--color-red);
-        text-shadow: 0px 0px 5px;
-    }
-    .charsheet .equipment {
-        min-height: 140px;
-    }
-    .charsheet .equipment .item .subitem .equippedlabel,
-    .charsheet .equipment .item .subitem span {
-        background: none;
-        color: var(--color-text-secondary);
-    }
-    .charsheet .item .subitem .subfield {
-        width: 77%;
-        font-family: var(--font-secondary);
-        font-size: 10px;
-        padding-top: 4px;
-    }
-    .charsheet .item .inventorysubflag:checked ~ .subitem {
-        margin-top: 2px;
-        box-shadow: 0px 0px 5px var(--color-yellow);
-    }*/
-    /*---------new version--------*/
+    
+    /* Inventory */
     .charsheet .equipment {
         min-height: 140px;
     }
@@ -5408,6 +5520,11 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
     .tokenslot small {
         color: var(--color-text-disabled);
     }
+    
+    
+    
+    
+    
     /* -------------------------------------------------------------------------- */
     /*                                     NPC                                    */
     /* -------------------------------------------------------------------------- */
@@ -5438,6 +5555,7 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
         color: var(--color-button-hover);
         box-shadow: 0px 0px 10px var(--color-yellow);
     }
+    
     /* Whisper toggle */
     .charsheet .npc_toggle[value="1"]~.advantagetoggle.whispertoggle {
         left: 505px;
@@ -5644,6 +5762,11 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
         width: 90%;
         font-size: 12px;
     }
+    
+    
+    
+    
+    
     /* ------------------------------ Charactermancer --------------------------- */
     .charsheet .showleveler[value="1"]+.levelerbutton {
         width: 18px;
@@ -5809,6 +5932,11 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
     .charsheet .mancer_confirm input[type="checkbox"] {
         height: 35px;
     }
+    
+    
+    
+    
+    
     /* ------------------------------ Token Settings ---------------------------- */
     .tokeneditor__dropdown .btn {
         background-image: none;
@@ -5819,6 +5947,10 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
         fill: var(--color-yellow);
         padding-top: 3px;
     }
+    
+    
+    
+    
     /* ------------------------------ Map Settings ------------------------------ */
     /*#color_selector
         + .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable.ui-dialog-buttons {
@@ -6222,6 +6354,11 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
 
 
 
+
+
+/* ------------------------------ Play Canvas Styles ------------------------------- */
+
+
 #bottompad {
     height: 0 !important;
 }
@@ -6241,6 +6378,11 @@ canvas {
 
 
 
+
+
+
+
+/* ------------------------------ Radial Menu ------------------------------- */
 
 
 #radial-menu {
