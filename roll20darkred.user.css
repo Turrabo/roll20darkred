@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.7.5
+@version      1.7.6
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.7.5 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.7.6 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2347,6 +2347,14 @@
         bottom: 0;
         width: 100%;
         height: 100%;
+    }
+    .characterlist > p {
+        text-align: center;
+        width: 255px;
+        max-width: 85%;
+        margin: 10px auto;
+        opacity: 0.8;
+        user-select: none;
     }
     
     
