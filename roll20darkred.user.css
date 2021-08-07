@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.7.0
+@version      1.7.1
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.7.0 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.7.1 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2780,7 +2780,7 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23ffffff' d='M512 160h-96V64c0-35-29-64-64-64H64C29 0 0 29 0 64v160c0 35 29 64 64 64h32v52a12 12 0 0019 10l77-44v78c0 35 29 64 64 64h96l109 62 7 2c6 0 12-5 12-12v-52h32c35 0 64-29 64-64V224c0-35-29-64-64-64zM96 240H64c-9 0-16-7-16-16V64c0-9 7-16 16-16h288c9 0 16 7 16 16v160c0 9-7 16-16 16H211l-11 6-56 32v-38H96zm432 144c0 9-7 16-16 16h-80v38l-56-32-11-6H256c-9 0-16-7-16-16v-96h112c35 0 64-29 64-64v-16h96c9 0 16 7 16 16v160z'/%3E%3C/svg%3E");
     }
     /* Handouts - regular */
-    .ui-tabs-nav > li:nth-of-type(2)::after {
+    .ui-tabs-nav > li[title="Journal"]::after {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23ffffff' d='M296 400h-80c-4 0-8 4-8 8v16c0 4 4 8 8 8h80c4 0 8-4 8-8v-16c0-4-4-8-8-8zM80 240v96c0 9 7 16 16 16h192c9 0 16-7 16-16v-96c0-9-7-16-16-16H96c-9 0-16 7-16 16zm32 16h160v64H112v-64zM370 98l-84-84c-9-9-21-14-34-14H48C22 0 0 22 0 48v416c0 27 22 48 48 48h288c26 0 48-21 48-48V132c0-13-5-25-14-34zM256 52l76 76h-76V52zm80 412H48V48h160v104c0 13 11 24 24 24h104v288zM88 112h80c4 0 8-4 8-8V88c0-4-4-8-8-8H88c-4 0-8 4-8 8v16c0 4 4 8 8 8zm0 64h80c4 0 8-4 8-8v-16c0-4-4-8-8-8H88c-4 0-8 4-8 8v16c0 4 4 8 8 8z'/%3E%3C/svg%3E");
     }
     /* Info circle - regular */
@@ -2792,11 +2792,11 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M480 0a32 32 0 00-10 2L166 98a32 32 0 00-22 30v235a110 110 0 00-48-11c-53 0-96 36-96 80s43 80 96 80c49 0 90-31 95-71a39 39 0 001-9V256l272-86v129a110 110 0 00-48-11c-53 0-96 36-96 80s43 80 96 80c49 0 90-31 95-71a39 39 0 001-8V32a32 32 0 00-32-32zM96 464c-28 0-48-17-48-32s20-32 48-32 48 17 48 32-20 32-48 32zm368-96c0 15-20 32-48 32s-48-17-48-32 20-32 48-32 48 17 48 32zm0-248l-272 86v-66l272-86z'/%3E%3C/svg%3E");
     }
     /* Hashtag - regular */
-    .ui-tabs-nav > li:nth-of-type(5)::after {
+    .ui-tabs-nav > li[title="Collection"]::after {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M444 190l4-24c1-7-5-14-12-14h-89l19-106c1-7-4-14-12-14h-24a12 12 0 00-12 10l-20 110H187l19-106c1-7-4-14-12-14h-24a12 12 0 00-12 10l-20 110H45a12 12 0 00-12 10l-4 24c-2 7 4 14 12 14h89l-20 112H16a12 12 0 00-12 10l-4 24c-1 7 5 14 12 14h89L82 466c-1 7 4 14 12 14h24a12 12 0 0012-10l20-110h111l-19 106c-1 7 4 14 12 14h24a12 12 0 0012-10l20-110h93a12 12 0 0012-10l4-24c2-7-4-14-12-14h-89l20-112h94a12 12 0 0012-10zM270 312H158l20-112h112l-20 112z'/%3E%3C/svg%3E");
     }
     /* Cog - regular */
-    .ui-tabs-nav > li:nth-of-type(6)::after {
+    .ui-tabs-nav > li[title="My Settings"]::after {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M453 237l31-18c10-6 14-17 12-27-12-43-34-81-65-111-7-8-19-9-29-4l-31 18a196 196 0 00-33-19V40a24 24 0 00-18-24c-42-11-86-11-128 0-10 3-18 13-18 24v36a196 196 0 00-33 19l-31-18c-10-5-22-4-29 4-31 30-53 68-65 111-2 10 2 21 12 27l31 18a198 198 0 000 38l-31 18c-10 6-14 17-12 27 12 43 34 81 65 111 7 8 19 9 29 4l31-18a196 196 0 0033 19v36a24 24 0 0018 24c42 11 86 11 128 0 10-3 18-13 18-24v-36a196 196 0 0033-19l31 18c10 5 22 4 29-4 31-30 53-68 65-111 2-10-2-21-12-27l-31-18v-38zm-53 63l44 25a200 200 0 01-34 59l-44-25c-32 27-37 30-76 44v50a201 201 0 01-68 0v-50c-39-14-44-17-76-44l-44 25a200 200 0 01-34-59l44-25c-7-41-7-47 0-88l-44-25c8-22 20-41 34-59l44 25c32-27 37-30 76-44V59a201 201 0 0168 0v50c39 14 44 17 76 44l44-25a200 200 0 0134 59l-44 25c7 41 7 47 0 88zM256 160a96 96 0 100 192 96 96 0 000-192zm0 144a48 48 0 110-96 48 48 0 010 96z'/%3E%3C/svg%3E");
     }
     
@@ -4954,7 +4954,7 @@
     .charsheet .licensecontainer .container:not(.npc) input[type="radio"].tab-button,
     .charsheet .licensecontainer .container:not(.npc) input[type="radio"].tab-button+span,
     .charsheet .licensecontainer .advantagetoggle {
-        top: -56px;
+        top: -11px;
     }
     .charsheet .skills-saves-container {
         margin-right: 0px;
