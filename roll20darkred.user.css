@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.7.1
+@version      1.7.2
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.7.1 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.7.2 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2783,6 +2783,10 @@
     .ui-tabs-nav > li[title="Journal"]::after {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23ffffff' d='M296 400h-80c-4 0-8 4-8 8v16c0 4 4 8 8 8h80c4 0 8-4 8-8v-16c0-4-4-8-8-8zM80 240v96c0 9 7 16 16 16h192c9 0 16-7 16-16v-96c0-9-7-16-16-16H96c-9 0-16 7-16 16zm32 16h160v64H112v-64zM370 98l-84-84c-9-9-21-14-34-14H48C22 0 0 22 0 48v416c0 27 22 48 48 48h288c26 0 48-21 48-48V132c0-13-5-25-14-34zM256 52l76 76h-76V52zm80 412H48V48h160v104c0 13 11 24 24 24h104v288zM88 112h80c4 0 8-4 8-8V88c0-4-4-8-8-8H88c-4 0-8 4-8 8v16c0 4 4 8 8 8zm0 64h80c4 0 8-4 8-8v-16c0-4-4-8-8-8H88c-4 0-8 4-8 8v16c0 4 4 8 8 8z'/%3E%3C/svg%3E");
     }
+    /* Palette - solid */
+    .ui-tabs-nav > li:nth-of-type(2):not([title="Journal"])::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M204 5C105 24 25 104 5 203c-37 187 132 327 259 307 41-6 61-54 43-92a68 68 0 0160-98h80c36 0 65-30 65-65C512 97 368-27 204 5zM96 320a32 32 0 110-64 32 32 0 010 64zm32-128a32 32 0 110-64 32 32 0 010 64zm128-64a32 32 0 110-64 32 32 0 010 64zm128 64a32 32 0 110-64 32 32 0 010 64z'/%3E%3C/svg%3E");
+    }
     /* Info circle - regular */
     .ui-tabs-nav > li#compendiumtab::after {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M256 8a248 248 0 100 496 248 248 0 000-496zm0 448a200 200 0 110-400 200 200 0 010 400zm0-338a42 42 0 110 84 42 42 0 010-84zm56 254c0 7-5 12-12 12h-88c-7 0-12-5-12-12v-24c0-7 5-12 12-12h12v-64h-12c-7 0-12-5-12-12v-24c0-7 5-12 12-12h64c7 0 12 5 12 12v100h12c7 0 12 5 12 12v24z'/%3E%3C/svg%3E");
@@ -2815,7 +2819,6 @@
     
     
     
-    /* Palette - solid */
     /* Draw Square - solid */
     #floatingtoolbar li.rect,
     #floatingtoolbar li.chooserect {
