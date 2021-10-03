@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.9.0
+@version      1.9.1
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.9.0 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.9.1 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2918,23 +2918,28 @@
     
     
     
-    /* Draw Square - solid */
-    #floatingtoolbar li.rect,
-    #floatingtoolbar li.chooserect {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M416 361V151a64 64 0 10-87-87H119a64 64 0 10-87 87v210a64 64 0 1087 87h210a64 64 0 1087-87zm-320 0V151a64 64 0 0023-23h210a64 64 0 0023 23v210a64 64 0 00-23 23H119a64 64 0 00-23-23zM400 96a16 16 0 11-32 0 16 16 0 0132 0zM64 80a16 16 0 110 32 16 16 0 010-32zM48 416a16 16 0 1132 0 16 16 0 01-32 0zm336 16a16 16 0 110-32 16 16 0 010 32z'/%3E%3C/svg%3E");
-    }
     /* Free draw paintbrush - solid */
-    #floatingtoolbar li.path,
+    #floatingtoolbar li#drawingtools:not(.activebutton),
     #floatingtoolbar li.choosepath {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M366 33L194 290l78 65 219-222c73-80-63-188-125-100zM168 309c-41 3-77 18-98 73-3 6-8 10-15 10-11 0-45-28-55-35 0 83 38 155 128 155 76 0 128-44 128-120l-1-10-87-73z'/%3E%3C/svg%3E");
     }
+    /* Draw Circle */
+    #floatingtoolbar li#drawingtools.activebutton,
+    #floatingtoolbar li.choosecircle {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M512 256c0-30-21-56-49-62-21-69-76-124-145-145a64 64 0 0 0-124 0C125 70 70 125 49 194a64 64 0 0 0 0 124c21 69 76 124 145 145a64 64 0 0 0 124 0c69-21 124-76 145-145 28-6 49-32 49-62zm-64 16a16 16 0 1 1 0-32 16 16 0 0 1 0 32zM256 48a16 16 0 1 1 0 32 16 16 0 0 1 0-32zM64 240a16 16 0 1 1 0 32 16 16 0 0 1 0-32zm192 224a16 16 0 1 1 0-32 16 16 0 0 1 0 32zm54-50a64 64 0 0 0-108 0A167 167 0 0 1 98 310a64 64 0 0 0 0-108A167 167 0 0 1 202 98a64 64 0 0 0 108 0 167 167 0 0 1 104 104 64 64 0 0 0 0 108 167 167 0 0 1-104 104z'/%3E%3C/svg%3E");
+    }
+    /* Draw Square - solid */
+    #floatingtoolbar li#drawingtools.activebutton.rect,
+    #floatingtoolbar li.chooserect {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M416 361V151a64 64 0 10-87-87H119a64 64 0 10-87 87v210a64 64 0 1087 87h210a64 64 0 1087-87zm-320 0V151a64 64 0 0023-23h210a64 64 0 0023 23v210a64 64 0 00-23 23H119a64 64 0 00-23-23zM400 96a16 16 0 11-32 0 16 16 0 0132 0zM64 80a16 16 0 110 32 16 16 0 010-32zM48 416a16 16 0 1132 0 16 16 0 01-32 0zm336 16a16 16 0 110-32 16 16 0 010 32z'/%3E%3C/svg%3E");
+    }
     /* Draw line - solid */
-    #floatingtoolbar li.polygon,
+    #floatingtoolbar li#drawingtools.activebutton.polygon,
     #floatingtoolbar li.choosepolygon {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M400 354l-33-110c9-12 14-26 14-41a64 64 0 00-128-1l-91 52-16-7-34-108a64 64 0 10-63 19l34 109a64 64 0 10112 44l92-52c6 3 11 5 18 6l32 108a64 64 0 1063-19zM48 96c0-9 7-16 16-16s16 7 16 16-7 16-16 16-16-7-16-16zm83 229c-9 0-16-7-16-16 0-8 7-16 16-16 8 0 16 8 16 16 0 9-7 16-16 16zm170-122c0-9 8-16 16-16 9 0 16 7 16 16 0 8-7 16-16 16-8 0-16-7-16-16zm83 229c-9 0-16-7-16-16s7-16 16-16 16 7 16 16-7 16-16 16z'/%3E%3C/svg%3E");
     }
     /* Type text - solid */
-    #floatingtoolbar li.text,
+    #floatingtoolbar li#drawingtools.activebutton.text,
     #floatingtoolbar li.choosetext {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath fill='%23ffffff' d='M256 52V12c0-7-5-12-12-12-32 0-78 0-116 38C90 1 47 0 12 0 5 0 0 6 0 12v40c0 6 5 12 12 12 26-1 84 3 84 48v112H60c-7 0-12 5-12 12v40c0 7 5 12 12 12h36v112c0 45-56 48-84 48-7 0-12 5-12 12v40c0 7 5 12 12 12 32 0 78 0 116-38 38 37 81 38 116 38 7 0 12-6 12-12v-40c0-6-5-12-12-12-26 1-84-3-84-48V288h36c7 0 12-5 12-12v-40c0-7-5-12-12-12h-36V112c0-45 56-48 84-48 7 0 12-5 12-12z'/%3E%3C/svg%3E");
     }
