@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.10.0
+@version      1.10.1
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.10.0 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.10.1 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -4221,9 +4221,57 @@
         padding: 0 10px 10px;
         background-color: var(--color-bg-light);
     }
-    .sheet-rolltemplate-atk .sheet-container, .sheet-rolltemplate-atkdmg .sheet-container.sheet-atk, .sheet-rolltemplate-dmg .sheet-atk {
+    .sheet-rolltemplate-atk .sheet-container:last-child:not(:only-child), .sheet-rolltemplate-atkdmg .sheet-container.sheet-atk:last-child:not(:only-child), .sheet-rolltemplate-dmg .sheet-atk:last-child:not(:only-child) {
         margin-bottom: -9px;
     }
+    .sheet-rolltemplate-atk .sheet-container:last-child, .sheet-rolltemplate-atkdmg .sheet-container.sheet-atk:last-child, .sheet-rolltemplate-dmg .sheet-atk:last-child {
+        border-bottom-left-radius: 0.8em;
+        border-bottom-right-radius: 0.8em;
+    }
+    .sheet-rolltemplate-dmg div.sheet-desc {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .sheet-rolltemplate-dmg div.sheet-desc:first-child {
+        border-top-left-radius: 0.8em;
+        border-top-right-radius: 0.8em;
+        overflow: hidden;
+    }
+    .sheet-rolltemplate-atk .sheet-info:last-child {
+        padding: 1px 0;
+    }
+    .sheet-rolltemplate-atk .sheet-info:last-child .sheet-top:empty + .sheet-middle {
+        border-bottom-right-radius: 0.8em;
+        border-bottom-left-radius: 0.8em;
+    }
+    .sheet-rolltemplate-atkdmg .sheet-desc.sheet-info {
+        padding: 0;
+    }
+    .sheet-rolltemplate-atkdmg .sheet-desc.sheet-info .sheet-top:empty + .sheet-middle {
+        box-shadow: none;
+    }
+    .sheet-rolltemplate-dmg:only-child .sheet-container.sheet-damagetemplate:only-child {
+        border-top-right-radius: 0.8em;
+        border-top-left-radius: 0.8em;
+    }
+    
+    .sheet-rolltemplate-simple .sheet-charname, .sheet-rolltemplate-simple3D .sheet-charname, .sheet-rolltemplate-skill .sheet-charname, .sheet-rolltemplate-atk .sheet-charname, .sheet-rolltemplate-dmg .sheet-charname, .sheet-rolltemplate-atkdmg .sheet-charname {
+        text-align: center;
+        margin-top: -5px;
+        padding-bottom: 7px;
+    }
+    .sheet-rolltemplate-dmg .sheet-label {
+        padding-bottom: 0.8em
+    }
+    .sheet-rolltemplate-spell .sheet-container:only-child {
+        border-radius: 0.8em;
+    }
+    
+    
+    .sheet-rolltemplate-dmg div.sheet-desc .sheet-middle {
+        box-shadow: none !important;
+    }
+    
     .sheet-rolltemplate-atk .sheet-spelldesc-link, .sheet-rolltemplate-dmg .sheet-spelldesc-link, .sheet-rolltemplate-atkdmg .sheet-spelldesc-link {
         margin-bottom: 14px;
     }
@@ -4231,6 +4279,10 @@
     .textchatcontainer .emote {
         color: var(--color-text-primary);
         font-weight: 300;
+    }
+    .message.emote {
+        margin-top: 2em;
+        padding-right: 5em;
     }
     /* System */
     .textchatcontainer .message.system {
