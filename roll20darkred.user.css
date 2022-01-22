@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.10.1
+@version      1.10.2
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.10.1 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.10.2 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -1261,26 +1261,27 @@
     
     *::-webkit-scrollbar {
         -webkit-appearance: none;
-        width: 12px;
-        height: 12px;
+        width: 12px !important;
+        height: 12px !important;
     }
     * {
-        scrollbar-width: thin;
-        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+        scrollbar-width: thin !important;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG)  !important;
     }
     *::-webkit-scrollbar-track {
-        background: var(--scrollbarBG);
+        background: var(--scrollbarBG)  !important;
     }
     *::-webkit-scrollbar-thumb {
-        background-color: var(--thumbBG);
-        border-radius: 6px;
+        background-color: var(--thumbBG) !important;
+        border-color: var(--thumbBG) !important;
+        border-radius: 6px !important;
     }
     *::-webkit-scrollbar-thumb:hover {
-        background-color: var(--thumbBGhover);
+        background-color: var(--thumbBGhover) !important;
     }
     *::-webkit-scrollbar-corner {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
     }
     
     
@@ -4600,7 +4601,32 @@
     .sheet-rolltemplate-dmg .sheet-save .sheet-savedc span span {
         top: 0px !important;
     }
-    .sheet-rolltemplate-atkdmg .sheet-damagetemplate .inlinerollresult.fullcrit, .sheet-rolltemplate-atkdmg .sheet-damagetemplate .inlinerollresult.fullfail, .sheet-rolltemplate-atkdmg .sheet-damagetemplate .inlinerollresult.importantroll, .sheet-rolltemplate-dmg .sheet-damagetemplate .inlinerollresult.fullcrit, .sheet-rolltemplate-dmg .sheet-damagetemplate .inlinerollresult.fullfail, .sheet-rolltemplate-dmg .sheet-damagetemplate .inlinerollresult.importantroll, .sheet-rolltemplate-npcaction .sheet-damagetemplate .inlinerollresult.fullcrit, .sheet-rolltemplate-npcaction .sheet-damagetemplate .inlinerollresult.fullfail, .sheet-rolltemplate-npcaction .sheet-damagetemplate .inlinerollresult.importantroll, .sheet-rolltemplate-npcdmg .sheet-damagetemplate .inlinerollresult.fullcrit, .sheet-rolltemplate-npcdmg .sheet-damagetemplate .inlinerollresult.fullfail, .sheet-rolltemplate-npcdmg .sheet-damagetemplate .inlinerollresult.importantroll, .sheet-rolltemplate-atkdmg .sheet-desc .inlinerollresult.fullcrit, .sheet-rolltemplate-atkdmg .sheet-desc .inlinerollresult.importantroll, .sheet-rolltemplate-atkdmg .sheet-desc .inlinerollresult.fullfail, .sheet-rolltemplate-dmg .sheet-desc .inlinerollresult.fullcrit, .sheet-rolltemplate-dmg .sheet-desc .inlinerollresult.importantroll, .sheet-rolltemplate-dmg .sheet-desc .inlinerollresult.fullfail .sheet-rolltemplate-atk .sheet-desc .inlinerollresult.fullcrit, .sheet-rolltemplate-atk .sheet-desc .inlinerollresult.importantroll, .sheet-rolltemplate-atk .sheet-desc .inlinerollresult.fullfail, .sheet-rolltemplate-mancerroll .inlinerollresult.fullcrit, .sheet-rolltemplate-mancerroll .inlinerollresult.importantroll, .sheet-rolltemplate-mancerroll .inlinerollresult.fullfail, .sheet-rolltemplate-mancerhproll .inlinerollresult.fullcrit, .sheet-rolltemplate-mancerhproll .inlinerollresult.importantroll, .sheet-rolltemplate-mancerhproll .inlinerollresult.fullfail {
+    .sheet-rolltemplate-atkdmg .sheet-damagetemplate .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-atkdmg .sheet-damagetemplate .inlinerollresult.fullfail,
+    .sheet-rolltemplate-atkdmg .sheet-damagetemplate .inlinerollresult.importantroll,
+    .sheet-rolltemplate-dmg .sheet-damagetemplate .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-dmg .sheet-damagetemplate .inlinerollresult.fullfail,
+    .sheet-rolltemplate-dmg .sheet-damagetemplate .inlinerollresult.importantroll,
+    .sheet-rolltemplate-npcaction .sheet-damagetemplate .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-npcaction .sheet-damagetemplate .inlinerollresult.fullfail,
+    .sheet-rolltemplate-npcaction .sheet-damagetemplate .inlinerollresult.importantroll,
+    .sheet-rolltemplate-npcdmg .sheet-damagetemplate .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-npcdmg .sheet-damagetemplate .inlinerollresult.fullfail,
+    .sheet-rolltemplate-npcdmg .sheet-damagetemplate .inlinerollresult.importantroll,
+    .sheet-rolltemplate-atkdmg .sheet-desc .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-atkdmg .sheet-desc .inlinerollresult.importantroll,
+    .sheet-rolltemplate-atkdmg .sheet-desc .inlinerollresult.fullfail,
+    .sheet-rolltemplate-dmg .sheet-desc .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-dmg .sheet-desc .inlinerollresult.importantroll,
+    .sheet-rolltemplate-dmg .sheet-desc .inlinerollresult.fullfail .sheet-rolltemplate-atk .sheet-desc .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-atk .sheet-desc .inlinerollresult.importantroll,
+    .sheet-rolltemplate-atk .sheet-desc .inlinerollresult.fullfail,
+    .sheet-rolltemplate-mancerroll .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-mancerroll .inlinerollresult.importantroll,
+    .sheet-rolltemplate-mancerroll .inlinerollresult.fullfail,
+    .sheet-rolltemplate-mancerhproll .inlinerollresult.fullcrit,
+    .sheet-rolltemplate-mancerhproll .inlinerollresult.importantroll,
+    .sheet-rolltemplate-mancerhproll .inlinerollresult.fullfail {
         color: var(--color-blue);
         text-shadow: 0px 0px 20px, 0px 0px 20px !important;
         animation: var(--anim-crit);
@@ -4688,6 +4714,18 @@
     }
     .sheet-rolltemplate-traits .sheet-desc {
         line-height: 14px;
+    }
+    .sheet-rolltemplate-npcdmg .sheet-desc {
+        line-height: 1.2;
+        display: inline-block;
+        margin: 1em 0.4em 0.2em 0.5em;
+    }
+    .sheet-rolltemplate-npcdmg .sheet-damagetemplate {
+        line-height: 1.2;
+        margin-top: 1em;
+    }
+    .sheet-rolltemplate-npcdmg .sheet-damagetemplate > .sheet-italics:first-child {
+        margin-right: 0.4em;
     }
     .sheet-rolltemplate-spell .sheet-container, .sheet-rolltemplate-spelloutput .sheet-container {
         font-family: var(--font-secondary);
