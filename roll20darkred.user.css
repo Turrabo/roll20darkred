@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.10.2
+@version      1.10.3
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.10.2 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.10.3 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -4786,7 +4786,7 @@
         background-position-x: 3px, calc(100% - 3px) !important;
         background-position-y: 3px, 3px !important;
         background-size: 20px !important;
-        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAC3UExURUdwTOzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9lRJuQIAAAA8dFJOUwAGGBAh9+jnIHC0wN/0dbPMDKHQEvsUhRoe/tWCWQMku08JebVpJUuU2z9+MraZXVHvZcbsZ+Qti6c9VjwUwqYAAAHySURBVDjLlZXreoIwDIYryBBQ1CmoDkCY25SdnDp3yv1f15pC2yD4PFv+IPUl6fclBcb+FR31ax47kedFTjxv4269XFxNfwIqJn63wQFE/BJeD6AWy2fjnAO4ZQ8BNCJ4rIGC+JbgtoaupoR8wpKDpwj/eFsl+8MbIW8oaYyQHG/geJeHK4ONs9EFMl8DwGi8y5nRhz46syHVNbefmDNBIgeecDXWpFIUBjy/Y/FnNcfYl9YuXcJsQVFw8ghwkF1KrhT5XK6YVnlT2HzncFL9cLTz5ZqPv605M7aQ8RtbkmUCEb5YEP2doY5Th+UAdq8ib3TfxYNo9zFHHeDnuavJFy0cHStEwjnnDieAq3QIsvqnBuNqz1aSLbkvXS7HvlekLg2OBLnB6J8gU7ckx6TlUQVeo2+YpCfItdhnRkbDI2AZPZWzR8FVA6yq4z4Xd809EpBpRYREMD0DiaLFuwSLyvAaSBXtieHMFfY0SaHoXbcQR3T5USfPFZVDMbUANqyFVIosUw2uFbaRUtFMHoV+MyVV9KqyPOCxbifJ1FWTx48gu6SIvK2+LpJCUarWpt5FsrslJ7uqft+2z0AZLhX1YbBLWkiMBV0MZxZss6RZvZoeEtPYtezPXa2faeRydth4nZup4/g/P2btU5A6686fPxy/z0GPYx/Whm4AAAAASUVORK5CYII="), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURUdwTObn8Ozt9tUSDygAAAACdFJOUwBa/S110gAAAIhJREFUWMPt1jkOgDAMBVEz9z80HRKKWJxJACH/3q+I4iXiOGyJnrCLLM8T4ARwAjgBpGABkMLrAEihgAKGAD9opg9MJA/oqez3ggf0avOA3s6tEI8DMbbeA/oNc8Iy60AZMFMvCW5Elp8RoARSsfWtAE4AJ4AUCihgyE/0veC7MUdMm4k9R9YKR5IQIqaJ41sAAAAASUVORK5CYII=");
+/*         background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAC3UExURUdwTOzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9lRJuQIAAAA8dFJOUwAGGBAh9+jnIHC0wN/0dbPMDKHQEvsUhRoe/tWCWQMku08JebVpJUuU2z9+MraZXVHvZcbsZ+Qti6c9VjwUwqYAAAHySURBVDjLlZXreoIwDIYryBBQ1CmoDkCY25SdnDp3yv1f15pC2yD4PFv+IPUl6fclBcb+FR31ax47kedFTjxv4269XFxNfwIqJn63wQFE/BJeD6AWy2fjnAO4ZQ8BNCJ4rIGC+JbgtoaupoR8wpKDpwj/eFsl+8MbIW8oaYyQHG/geJeHK4ONs9EFMl8DwGi8y5nRhz46syHVNbefmDNBIgeecDXWpFIUBjy/Y/FnNcfYl9YuXcJsQVFw8ghwkF1KrhT5XK6YVnlT2HzncFL9cLTz5ZqPv605M7aQ8RtbkmUCEb5YEP2doY5Th+UAdq8ib3TfxYNo9zFHHeDnuavJFy0cHStEwjnnDieAq3QIsvqnBuNqz1aSLbkvXS7HvlekLg2OBLnB6J8gU7ckx6TlUQVeo2+YpCfItdhnRkbDI2AZPZWzR8FVA6yq4z4Xd809EpBpRYREMD0DiaLFuwSLyvAaSBXtieHMFfY0SaHoXbcQR3T5USfPFZVDMbUANqyFVIosUw2uFbaRUtFMHoV+MyVV9KqyPOCxbifJ1FWTx48gu6SIvK2+LpJCUarWpt5FsrslJ7uqft+2z0AZLhX1YbBLWkiMBV0MZxZss6RZvZoeEtPYtezPXa2faeRydth4nZup4/g/P2btU5A6686fPxy/z0GPYx/Whm4AAAAASUVORK5CYII="), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURUdwTObn8Ozt9tUSDygAAAACdFJOUwBa/S110gAAAIhJREFUWMPt1jkOgDAMBVEz9z80HRKKWJxJACH/3q+I4iXiOGyJnrCLLM8T4ARwAjgBpGABkMLrAEihgAKGAD9opg9MJA/oqez3ggf0avOA3s6tEI8DMbbeA/oNc8Iy60AZMFMvCW5Elp8RoARSsfWtAE4AJ4AUCihgyE/0veC7MUdMm4k9R9YKR5IQIqaJ41sAAAAASUVORK5CYII="); */
     }
     .sheet-grey span {
         color: var(--color-text-disabled) !important;
