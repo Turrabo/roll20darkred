@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.12.0
+@version      1.13.0
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.12.0 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.13.0 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2400,6 +2400,9 @@
     #floatingtoolbar > ul {
         width: unset;
     }
+    #floatingtoolbar > ul {
+        padding: 2px;
+    }
     
     #floatingtoolbar > ul > li {
         border-radius: 3px;
@@ -2409,7 +2412,8 @@
     }
     
     #floatingtoolbar div.submenu {
-        left: 38px;
+        left: 48px;
+        top: -20%;
     }
     
     #floatingtoolbar li {
@@ -3508,6 +3512,58 @@
         transform: scaleX(0.98);
     }
     
+    #vm_settings_categories #categories {
+        padding: 16px 6px 12px 16px;
+    }
+    
+    #vm_settings_categories #categories .panel-default > .panel-heading {
+        background-color: var(--color-button-main);
+        color: var(--color-text-main);
+        border: none;
+    }
+    #vm_settings_categories #categories .panel-default > .panel-heading.collapsed {
+        border-radius: 3px;
+    }
+    #vm_settings_categories #categories .panel-default > .panel-heading .panel-title > a,
+    #vm_settings_categories #categories .panel-default > .panel-heading .panel-title > a::after {
+        color: var(--color-text-main) !important;
+    }
+    
+    #vm_settings_categories .panel-group .panel-heading + .panel-collapse > .panel-body {
+        border: none;
+    }
+    
+    #vm_settings_categories .panel-group .panel-heading + .panel-collapse {
+        background: var(--color-bg-dark);
+        border-radius: 0 0 3px 3px;
+        border: solid 1px rgba(255, 255, 255, 0.5) !important;
+        border-top-width: 0px;
+        color: white !important;
+    }
+    
+    #vm_settings_categories .panel-group .panel-heading + .panel-collapse label {
+        color: white;
+    }
+    
+    #vm_settings_categories .panel-group .panel-heading + .panel-collapse > .panel-body > ul {
+        display: flex;
+        padding: 10px 10px 0;
+        margin: 0 0 15px;
+    }
+    
+    #vm_settings_categories .panel-group .panel-heading + .panel-collapse > .panel-body > ul > li {
+        cursor: pointer;
+        outline: none;
+    }
+    
+    #vm_settings_categories .panel-group .panel + .panel {
+        margin-top: 10px;
+    }
+    
+    label[for] {
+        cursor: pointer;
+        user-select: none;
+    }
     
     
     
@@ -7242,6 +7298,8 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     label.dark-mode-switch {
         top: 20px;
         left: 90px;
+        width: unset;
+        height: unset;
     }
     
     [aria-describedby="darkModeModal-description"] {
@@ -7250,6 +7308,9 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     
     input#dark-mode-switch:checked {
         opacity: 1;
+        width: 51px;
+        height: 26px;
+        appearance: none;
     }
     input#dark-mode-switch:checked::before {
         content: "";
@@ -7274,6 +7335,323 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     input#dark-mode-switch:not(:checked) ~ * {
         content: unset !important;
         display: none !important;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+    /* ------------------------------ Play Canvas Styles ------------------------------- */
+
+
+    #bottompad {
+        height: 0 !important;
+    }
+    canvas {
+        outline: none !important;
+    }
+    .canvas-container, #finalcanvas {
+        border-radius: 5px;
+    }
+    #cookie-modal,
+    #gdpr-notification {
+        display: none !important;
+    }
+    #playerzone {
+        padding-left: 15px;
+    }
+
+
+
+
+
+
+
+    /* ------------------------------ Radial Menu ------------------------------- */
+
+
+    #radial-menu {
+        --color-bg-dark: #1c1d28;
+        --color-text-disabled: #888994;
+        --color-element-bg: #373a52;
+        --color-red: #f85212;
+        --color-green: #78ff10;
+        --color-blue: #0c6be7;
+        --color-yellow: #fc0;
+        --font-number: "Ruda", sans-serif;
+    }
+
+    #radial-menu {
+        box-sizing: border-box !important;
+        position: fixed;
+        top: 20px !important;
+        left: max(220px, calc(50vw - 150px)) !important;
+        transform: translateX(-50%) !important;
+        height: unset !important;
+        width: unset !important;
+        display: flex !important;
+        padding: 0.7em 1em !important;
+        background-color: var(--color-element-bg);
+        border-radius: 10px !important;
+        border: 2px solid #666;
+    }
+
+    #radial-menu > .button {
+        position: relative !important;
+        left: unset !important;
+        top: unset !important;
+        right: unset !important;
+        bottom: unset !important;
+        border-radius: 999px;
+        opacity: 1 !important;
+        background: #303030 !important;
+        font-family: var(--font-secondary);
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 800;
+        color: white;
+    }
+    #radial-menu .popupvalue {
+        all: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    #radial-menu .popupvalue,
+    #radial-menu > .button .inner {
+        display: contents;
+    }
+    #radial-menu .popupvalue input {
+        all: unset;
+    }
+    #radial-menu .popupvalue input,
+    #radial-menu .button .inner > span {
+        padding: 0;
+        margin: 0;
+        text-shadow: none;
+        position: absolute !important;
+        top: 50% !important;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: calc(100% - 43px);
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    #radial-menu .button-3 .inner > span,
+    #radial-menu .button-3 .popupvalue input {
+        left: 43px;
+    }
+    #radial-menu .button-4 .inner > span,
+    #radial-menu .button-5 .inner > span,
+    #radial-menu .button-4 .popupvalue input,
+    #radial-menu .button-5 .popupvalue input {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    #radial-menu .button-3 {
+        width: 110px;
+    }
+    #radial-menu .button-3:focus-within .inner > span,
+    #radial-menu .button-4:focus-within .inner > span,
+    #radial-menu .button-5:focus-within .inner > span {
+        color: transparent;
+    }
+    #radial-menu .button-3::after {
+        content: '❤';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(12px,-48%);
+        font-size: 90%;
+        color: var(--color-green);
+    }
+
+
+
+
+    #radial-menu > .button-1 {
+        order: 5;
+        border-radius: 0 10px 10px 0 !important;
+        border-left: none !important;
+    }
+
+    #radial-menu > .button-2 {
+        order: 4;
+        border-radius: 10px 0 0 10px !important;
+        margin-left: 1em;
+    }
+
+    #radial-menu > .button-4,
+    #radial-menu > .button-5 {
+        margin-left: 0.5em;
+    }
+
+
+
+
+    #radial-menu .button.button-1,
+    #radial-menu .button.button-2 {
+        border: solid 3px #4f4f4f;
+        background-repeat: no-repeat !important;
+        background-size: auto 55% !important;
+        background-position: center !important;
+        background-color: white !important;
+    }
+    #radial-menu .button.button-3 {
+        border: solid 4px var(--color-green);
+    }
+    #radial-menu .button.button-4 {
+        border: solid 4px var(--color-blue);
+    }
+    #radial-menu .button.button-5 {
+        border: solid 4px var(--color-red);
+    }
+    #radial-menu .button.button-3,
+    #radial-menu .button.button-4,
+    #radial-menu .button.button-5 {
+        box-shadow: 0 0 6px 2px rgba(0,0,0,0.5) !important;
+    }
+
+    #radial-menu .button div.inner span {
+        font-size: 24px !important;
+    }
+
+
+
+
+    #radial-menu + .tipsy {
+        padding-top: 50px !important;
+    }
+
+
+
+
+
+    #radial-menu .markermenu {
+        background: var(--color-element-bg) !important;
+        top: 50% !important;
+        z-index: 1;
+        transform: translateX(-50%) !important;
+        border-radius: 3px !important;
+        padding: 14px !important;
+        height: 235px !important;
+        width: 200px !important;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        opacity: 0;
+        transition: opacity 0.3s;
+        overflow-y: auto !important;
+        box-shadow: 0 0 10px 4px rgba(0,0,0,0.5);
+        border: 2px solid #666;
+    }
+    #radial-menu .markermenu.open {
+        opacity: 1;
+    }
+
+
+    #radial-menu .markermenu > * {
+        border: none !important;
+        height: 45px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center;
+        background-position: center !important;
+        background-size: auto 50% !important;
+    }
+
+
+    #radial-menu .markermenu > .markercolor {
+        background-color: unset !important;
+        border-radius: 0;
+        padding: 0 !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80% 80% !important;
+    }
+    #radial-menu .markermenu > .markercolor:hover,
+    #radial-menu .markermenu > .markercolor.active {
+        background-size: 100% 100% !important;
+    }
+    #radial-menu .markermenu > *:hover {
+        background-size: auto 65% !important;
+        background-color: rgba(0,0,0,0.2) !important;
+    }
+    #radial-menu .markermenu > *.active {
+        outline: 2px dashed var(--color-yellow);
+        outline-offset: -1px;
+        border: 0px;
+        background-color: rgba(0,0,0,0.5) !important;
+        width: 100% !important;
+        margin: auto !important;
+        text-align: center;
+        background-position: center !important;
+        background-size: auto 65% !important;
+    }
+    #radial-menu .markermenu .markercolor.dead {
+        color: var(--color-red);
+        position: unset;
+        top: unset;
+        padding: 0 !important;
+        line-height: 45px;
+        font-size: 28px;
+    }
+    #radial-menu .markermenu .markercolor.dead:hover::after,
+    #radial-menu .markermenu .markercolor.dead.active::after {
+        font-size: 37px;
+    }
+
+    #radial-menu .markercolor[data-action-type="toggle_status_red"] {
+        background-image: radial-gradient(#C91010 50%, transparent calc(50% + 1px));
+    }
+    #radial-menu .markercolor[data-action-type="toggle_status_blue"] {
+        background-image: radial-gradient(#1076C9 50%, transparent calc(50% + 1px));
+    }
+    #radial-menu .markercolor[data-action-type="toggle_status_green"] {
+        background-image: radial-gradient(#2FC910 50%, transparent calc(50% + 1px));
+    }
+    #radial-menu .markercolor[data-action-type="toggle_status_brown"] {
+        background-image: radial-gradient(#C97310 50%, transparent calc(50% + 1px));
+    }
+    #radial-menu .markercolor[data-action-type="toggle_status_purple"] {
+        background-image: radial-gradient(#9510C9 50%, transparent calc(50% + 1px));
+    }
+    #radial-menu .markercolor[data-action-type="toggle_status_pink"] {
+        background-image: radial-gradient(#EB75E1 50%, transparent calc(50% + 1px));
+    }
+    #radial-menu .markercolor[data-action-type="toggle_status_yellow"] {
+        background-image: radial-gradient(#E5EB75 50%, transparent calc(50% + 1px));
+    }
+    #radial-menu .markercolor.dead {
+        font-size: 0 !important;
+    }
+    #radial-menu .markercolor.dead::after {
+        content: "✖";
+        color: #f21313;
+        font-size: 32px;
+    }    
+    #radial-menu .markercolor.dead ~ .statusicon {
+        filter: invert(1);
+        outline-color: #0211b3;
     }
 }
 
@@ -7497,295 +7875,117 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
 
 
 
-/* ------------------------------ Play Canvas Styles ------------------------------- */
+@-moz-document url-prefix("https://roll20.net/welcome") {
+    .bna,
+    .profilemeta ~ *,
+    .gameinfo .gameinfo,
+    .globalfooter {
+        display: none !important;
+    }
+    .container + .container > .row:nth-child(3),
+    .container + .container > .row:nth-child(3) ~ * {
+        display: none;
+    }
+    .homegamelist .listing img {
+        width: 100%;
+        height: 100%;
+        max-width: unset;
+        max-height: unset;
+        object-fit: cover;
+        border-radius: 0.7em;
+    }
+    script + .container:not(.topbar) .homegamelist  h2 {
+        font-size: 0px !important;
+    }
+    script + .container:not(.topbar) .homegamelist  h2::after {
+        content: "Your Games";
+        font-size: 4.5rem !important;
+    }
+    body {
+        padding-bottom: 5em;
+    }
+    
+    @media (min-width: 1200px) {
+        script + .container:not(.topbar) {
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+        .homegamelist .imgcontainer + .gameinfo {
+            display: flex;
+            flex-direction: column;
+        }
+        .homegamelist .imgcontainer + .gameinfo > a {
+            max-width: 100%;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
+        script + .container:not(.topbar)::before,
+        script + .container:not(.topbar)::after,
+        script + .container:not(.topbar) > .row::before,
+        script + .container:not(.topbar) > .row::after {
+            content: unset;
+        }
 
-#bottompad {
-    height: 0 !important;
-}
-canvas {
-    outline: none !important;
-}
-.canvas-container, #finalcanvas {
-    border-radius: 5px;
-}
-#cookie-modal,
-#gdpr-notification {
-    display: none !important;
-}
-#playerzone {
-    padding-left: 15px;
-}
+        script + .container:not(.topbar) > .row {
+            display: grid !important;
+            grid-auto-flow: column;
+            grid-template-columns: 7fr 2.6fr;
+            min-width: 0;
+            min-height: 0;
+            padding: 0;
+            margin: 0;
+        }
 
+        script + .container:not(.topbar) > .row > * {
+            all: unset;
+        }
 
+        script + .container:not(.topbar) .homegamelist .shorthr,
+        script + .container:not(.topbar) .homegamelist .shorthr + div {
+            display: none;
+        }
 
+        script + .container:not(.topbar) .homegamelist > * {
+            margin: 0 !important;
+            float: unset !important;
+        }
 
+        script + .container:not(.topbar) .homegamelist {
+            display: grid;
+            row-gap: 2.4em;
+            padding-right: 4em;
+            min-width: 0;
+            overflow: hidden;
+            grid-template-columns: repeat(3, 1fr);
+        }
 
+        script + .container:not(.topbar) .homegamelist > h2 {
+            order: 1;
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            align-self: center;
+        }
 
+        script + .container:not(.topbar) .homegamelist > div:first-child {
+            order: 2;
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            place-self: center end;
+        }
 
-/* ------------------------------ Radial Menu ------------------------------- */
+        script + .container:not(.topbar) .homegamelist > h2 ~ * {
+            order: 3;
+        }
 
+        script + .container:not(.topbar) .homegamelist .listing:nth-of-type(3n - 1) {
+            justify-self: center;
+        }
 
-#radial-menu {
-    --color-bg-dark: #1c1d28;
-    --color-text-disabled: #888994;
-    --color-element-bg: #373a52;
-    --color-red: #f85212;
-    --color-green: #78ff10;
-    --color-blue: #0c6be7;
-    --color-yellow: #fc0;
-    --font-number: "Ruda", sans-serif;
+        script + .container:not(.topbar) .homegamelist .listing:nth-of-type(3n) {
+            justify-self: end;
+        }
+    }
 }
-
-#radial-menu {
-    box-sizing: border-box !important;
-    position: fixed;
-    top: 20px !important;
-    left: max(220px, calc(50vw - 150px)) !important;
-    transform: translateX(-50%) !important;
-    height: unset !important;
-    width: unset !important;
-    display: flex !important;
-    padding: 0.7em 1em !important;
-    background-color: var(--color-element-bg);
-    border-radius: 10px !important;
-    border: 2px solid #666;
-}
-
-#radial-menu > .button {
-    position: relative !important;
-    left: unset !important;
-    top: unset !important;
-    right: unset !important;
-    bottom: unset !important;
-    border-radius: 999px;
-    opacity: 1 !important;
-    background: #303030 !important;
-    font-family: var(--font-secondary);
-    font-size: 24px;
-    line-height: 1;
-    font-weight: 800;
-    color: white;
-}
-#radial-menu .popupvalue {
-    all: unset;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-#radial-menu .popupvalue,
-#radial-menu > .button .inner {
-    display: contents;
-}
-#radial-menu .popupvalue input {
-    all: unset;
-}
-#radial-menu .popupvalue input,
-#radial-menu .button .inner > span {
-    padding: 0;
-    margin: 0;
-    text-shadow: none;
-    position: absolute !important;
-    top: 50% !important;
-    left: 0;
-    transform: translateY(-50%);
-    display: block;
-    width: calc(100% - 43px);
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-#radial-menu .button-3 .inner > span,
-#radial-menu .button-3 .popupvalue input {
-    left: 43px;
-}
-#radial-menu .button-4 .inner > span,
-#radial-menu .button-5 .inner > span,
-#radial-menu .button-4 .popupvalue input,
-#radial-menu .button-5 .popupvalue input {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-#radial-menu .button-3 {
-    width: 110px;
-}
-#radial-menu .button-3:focus-within .inner > span,
-#radial-menu .button-4:focus-within .inner > span,
-#radial-menu .button-5:focus-within .inner > span {
-    color: transparent;
-}
-#radial-menu .button-3::after {
-    content: '❤';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(12px,-48%);
-    font-size: 90%;
-    color: var(--color-green);
-}
-
-
-
-
-#radial-menu > .button-1 {
-    order: 5;
-    border-radius: 0 10px 10px 0 !important;
-    border-left: none !important;
-}
-
-#radial-menu > .button-2 {
-    order: 4;
-    border-radius: 10px 0 0 10px !important;
-    margin-left: 1em;
-}
-
-#radial-menu > .button-4,
-#radial-menu > .button-5 {
-    margin-left: 0.5em;
-}
-
-
-
-
-#radial-menu .button.button-1,
-#radial-menu .button.button-2 {
-    border: solid 3px #4f4f4f;
-    background-repeat: no-repeat !important;
-    background-size: auto 55% !important;
-    background-position: center !important;
-    background-color: white !important;
-}
-#radial-menu .button.button-3 {
-    border: solid 4px var(--color-green);
-}
-#radial-menu .button.button-4 {
-    border: solid 4px var(--color-blue);
-}
-#radial-menu .button.button-5 {
-    border: solid 4px var(--color-red);
-}
-#radial-menu .button.button-3,
-#radial-menu .button.button-4,
-#radial-menu .button.button-5 {
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.5) !important;
-}
-
-#radial-menu .button div.inner span {
-    font-size: 24px !important;
-}
-
-
-
-
-#radial-menu + .tipsy {
-    padding-top: 50px !important;
-}
-
-
-
-
-
-#radial-menu .markermenu {
-    background: var(--color-element-bg) !important;
-    top: 50% !important;
-    z-index: 1;
-    transform: translateX(-50%) !important;
-    border-radius: 3px !important;
-    padding: 14px !important;
-    height: 235px !important;
-    width: 200px !important;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    opacity: 0;
-    transition: opacity 0.3s;
-    overflow-y: auto !important;
-    box-shadow: 0 0 10px 4px rgba(0,0,0,0.5);
-    border: 2px solid #666;
-}
-#radial-menu .markermenu.open {
-    opacity: 1;
-}
-
-
-#radial-menu .markermenu > * {
-    border: none !important;
-    height: 45px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center;
-    background-position: center !important;
-    background-size: auto 50% !important;
-}
-
-
-#radial-menu .markermenu > .markercolor {
-    background-color: unset !important;
-    border-radius: 0;
-    padding: 0 !important;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80% 80% !important;
-}
-#radial-menu .markermenu > .markercolor:hover,
-#radial-menu .markermenu > .markercolor.active {
-    background-size: 100% 100% !important;
-}
-#radial-menu .markermenu > *:hover {
-    background-size: auto 65% !important;
-    background-color: rgba(0,0,0,0.2) !important;
-}
-#radial-menu .markermenu > *.active {
-    outline: 2px dashed var(--color-yellow);
-    outline-offset: -1px;
-    border: 0px;
-    background-color: rgba(0,0,0,0.5) !important;
-    width: 100% !important;
-    margin: auto !important;
-    text-align: center;
-    background-position: center !important;
-    background-size: auto 65% !important;
-}
-#radial-menu .markermenu .markercolor.dead {
-    color: var(--color-red);
-    position: unset;
-    top: unset;
-    padding: 0 !important;
-    line-height: 45px;
-    font-size: 28px;
-}
-#radial-menu .markermenu .markercolor.dead:hover,
-#radial-menu .markermenu .markercolor.dead.active {
-    font-size: 35px;
-}
-
-#radial-menu .markercolor[data-action-type="toggle_status_red"] {
-    background-image: radial-gradient(#C91010 50%, transparent 50%);
-}
-#radial-menu .markercolor[data-action-type="toggle_status_blue"] {
-    background-image: radial-gradient(#1076C9 50%, transparent 50%);
-}
-#radial-menu .markercolor[data-action-type="toggle_status_green"] {
-    background-image: radial-gradient(#2FC910 50%, transparent 50%);
-}
-#radial-menu .markercolor[data-action-type="toggle_status_brown"] {
-    background-image: radial-gradient(#C97310 50%, transparent 50%);
-}
-#radial-menu .markercolor[data-action-type="toggle_status_purple"] {
-    background-image: radial-gradient(#9510C9 50%, transparent 50%);
-}
-#radial-menu .markercolor[data-action-type="toggle_status_pink"] {
-    background-image: radial-gradient(#EB75E1 50%, transparent 50%);
-}
-#radial-menu .markercolor[data-action-type="toggle_status_yellow"] {
-    background-image: radial-gradient(#E5EB75 50%, transparent 50%);
-}
-
