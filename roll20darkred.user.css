@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.13.2
+@version      1.13.3
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.13.2 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.13.3 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2776,7 +2776,7 @@
     
     /* Making icons in the floating sidebar and submenus disappear */
     #floatingtoolbar > ul > li > img,
-    #floatingtoolbar .submenu > ul > li:not(.quickdice):not(.dicerollermenu):not(.choosecleardrawings):not(.chooseclearfog) > *:first-child {
+    #floatingtoolbar .submenu > ul > li:not(.quickdice):not(.dicerollermenu):not(.choosecleardrawings):not(.chooseclearfog) > *:first-child:not(#vm_hide_reveal) {
         display: none !important;
     }
     
@@ -2824,6 +2824,11 @@
         pointer-events: none;
     }
     
+    /* Hiding the new design for the fog submenu (the legacy one still works) */
+    #vue_container_hide_reveal > .udl {
+        display: none !important;
+    }
+    
     /* Special styles for individual icons */
     .choosecleardrawings > :first-child,
     .chooseclearfog > :first-child {
@@ -2851,7 +2856,7 @@
     #floatingtoolbar div.submenu li.gm_slider_box:not(:empty) {
         padding: 7px 20px 14px !important;
     }
-    #floatingtoolbar div.submenu li .gm_layer_slider {
+    #floatingtoolbar div.submenu li.gm_slider_box #gm_layer_slider {
         margin-top: 6px;
     }
     
@@ -3033,7 +3038,8 @@
     
     
     /* Lightbulb */
-    #floatingtoolbar li#placelight {
+    #floatingtoolbar li#placelight,
+    #floatingtoolbar li.choosewalls {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23fff' d='M240 454c0 7 2 13 5 18l18 26c5 8 17 14 26 14h62c9 0 21-6 27-14l17-26c3-5 5-11 5-18v-38H240v38zM320 0a175 175 0 0 0-132 291c16 19 42 58 52 91v1h160v-1c10-33 36-72 52-91A175 175 0 0 0 320 0zm0 96c-44 0-80 36-80 79 0 9-7 16-16 16s-16-7-16-16c0-61 50-111 112-111 9 0 16 7 16 16s-7 16-16 16zm-208 96c0-13-11-24-24-24H24a24 24 0 0 0 0 48h64c13 0 24-11 24-24zm504-24h-64a24 24 0 0 0 0 48h64a24 24 0 0 0 0-48zM131 55 76 23a24 24 0 0 0-37 21c0 9 5 17 13 21l55 32c7 4 17 4 24 0 8-4 12-12 12-21s-4-17-12-21zm457 264-55-32c-7-4-17-4-24 0-8 4-12 12-12 21s4 17 12 21l55 32c12 6 26 2 33-9 6-11 3-26-9-33zm-481-32-55 32c-8 4-13 12-13 21s5 17 12 21c8 4 17 4 25 0l55-32c11-7 15-21 8-33-6-11-20-15-32-9zm414-187 12-3 55-32a24 24 0 0 0-24-42l-55 32a24 24 0 0 0 12 45z'/%3E%3C/svg%3E");
     }
     
