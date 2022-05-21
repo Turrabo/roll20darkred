@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.13.1
+@version      1.13.2
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.13.1 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.13.2 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2996,6 +2996,13 @@
     
     
     
+    /* Lightning bolt - Special effects */
+    #floatingtoolbar li#fxtools {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23fff' d='M241 224h111c13 0 25 8 29 21 6 12 2 26-8 35L117 504a32 32 0 0 1-50-37l77-179H31c-12 0-24-8-29-21-5-12-1-26 9-35L267 8a32 32 0 0 1 50 37l-76 179z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
     /* Ruler - solid */
     #floatingtoolbar li#measure {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23ffffff' d='M636 167L556 32c-9-15-28-20-43-12l-69 39 59 102c3 4 1 9-3 11l-13 7c-4 3-9 1-11-2L416 75l-55 31 28 48c2 3 1 8-3 10l-14 8c-4 2-9 1-11-3l-28-47-55 31 60 102c2 4 1 9-3 11l-14 7c-4 3-9 1-11-2l-59-102-56 31 28 48c2 3 1 8-3 10l-13 8c-4 2-9 1-11-3l-28-47-55 31 59 102c2 3 1 8-3 10l-13 8c-4 2-9 1-11-3L85 263l-69 39c-15 9-21 28-12 43l80 135c9 15 28 20 43 12l497-282c15-9 21-28 12-43z'/%3E%3C/svg%3E");
@@ -3021,6 +3028,13 @@
     /* Hidden - solid */
     #floatingtoolbar li[mode="hide"] {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23ffffff' d='M320 400c-76 0-137-59-143-133L72 186c-14 17-26 35-37 55a32 32 0 000 30 321 321 0 00363 167l-52-41a144 144 0 01-26 3zm314 58l-111-85a331 331 0 0082-102 32 32 0 000-30A321 321 0 00320 64a308 308 0 00-147 38L45 3a16 16 0 00-22 3L3 31a16 16 0 003 23l589 455a16 16 0 0022-3l20-25a16 16 0 00-3-23zM450 316l-39-30a95 95 0 005-30 95 95 0 00-121-92 48 48 0 019 28 47 47 0 01-2 10l-73-57a142 142 0 0191-33 144 144 0 01144 144c0 22-5 42-14 60z'/%3E%3C/svg%3E");
+    }
+    
+    
+    
+    /* Lightbulb */
+    #floatingtoolbar li#placelight {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='%23fff' d='M240 454c0 7 2 13 5 18l18 26c5 8 17 14 26 14h62c9 0 21-6 27-14l17-26c3-5 5-11 5-18v-38H240v38zM320 0a175 175 0 0 0-132 291c16 19 42 58 52 91v1h160v-1c10-33 36-72 52-91A175 175 0 0 0 320 0zm0 96c-44 0-80 36-80 79 0 9-7 16-16 16s-16-7-16-16c0-61 50-111 112-111 9 0 16 7 16 16s-7 16-16 16zm-208 96c0-13-11-24-24-24H24a24 24 0 0 0 0 48h64c13 0 24-11 24-24zm504-24h-64a24 24 0 0 0 0 48h64a24 24 0 0 0 0-48zM131 55 76 23a24 24 0 0 0-37 21c0 9 5 17 13 21l55 32c7 4 17 4 24 0 8-4 12-12 12-21s-4-17-12-21zm457 264-55-32c-7-4-17-4-24 0-8 4-12 12-12 21s4 17 12 21l55 32c12 6 26 2 33-9 6-11 3-26-9-33zm-481-32-55 32c-8 4-13 12-13 21s5 17 12 21c8 4 17 4 25 0l55-32c11-7 15-21 8-33-6-11-20-15-32-9zm414-187 12-3 55-32a24 24 0 0 0-24-42l-55 32a24 24 0 0 0 12 45z'/%3E%3C/svg%3E");
     }
     
     
@@ -3194,9 +3208,18 @@
         left: 22px;
         top: 260px;
     }
+    
+    /*   Zoombar position for basic account DMs   */
     #page-toolbar[class] ~ #zoomclick {
         top: 360px;
     }
+    
+    
+    /*   Zoombar position for premium account DMs   */
+    .gmstyle ~ #zoomclick {
+        top: 450px !important;
+    }
+    
     @media (max-height: 550px) {
         #zoomclick {
             display: none;
@@ -7296,7 +7319,7 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     /* Hiding the dark mode switch when dark mode is turned on */
     
     label.dark-mode-switch {
-        top: 20px;
+        top: 20px !important;
         left: 90px;
         width: unset;
         height: unset;
