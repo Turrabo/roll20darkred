@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.13.4
+@version      1.14.0
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.13.4 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.14.0 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -7687,6 +7687,27 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     #radial-menu .markercolor.dead ~ .statusicon {
         filter: invert(1);
         outline-color: #0211b3;
+    }
+    
+    
+    
+    
+    
+    
+    
+    .bar-background::before {
+        font-size: 0.85em !important;
+        text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black !important;
+        letter-spacing: 1.5px !important;
+        font-family: monospace !important;
+    }
+    
+    .nameplate {
+        font-size: 12px !important;
+        padding-inline: 4px;
+        line-height: 16px !important;
+        border-radius: 4px;
+        letter-spacing: -0.5px
     }
 }
 
