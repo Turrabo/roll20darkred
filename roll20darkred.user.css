@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.14.0
+@version      1.14.1
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.14.0 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.14.1 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -6170,6 +6170,17 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
         color: var(--color-text-primary);
         background-color: var(--color-element-bg);
     }
+    
+    
+/*   Rest buttons   */
+    .resources .rest button {
+        background-color: var(--color-button-main);
+        border-radius: 3px;
+    }
+    .resources .rest button:is(:hover, :focus, :active) {
+        background-color: var(--color-button-hover);
+    }
+    
     
     
     
