@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.14.1
+@version      1.14.2
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.14.1 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.14.2 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -7988,6 +7988,10 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        
+        .homegamelist {
+            overflow: unset !important;
+        }
 
         script + .container:not(.topbar)::before,
         script + .container:not(.topbar)::after,
@@ -8011,7 +8015,8 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
         }
 
         script + .container:not(.topbar) .homegamelist .shorthr,
-        script + .container:not(.topbar) .homegamelist .shorthr + div {
+        script + .container:not(.topbar) .homegamelist .shorthr + div:not(.listing),
+        div[style*="clear"] {
             display: none;
         }
 
@@ -8053,6 +8058,17 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
 
         script + .container:not(.topbar) .homegamelist .listing:nth-of-type(3n) {
             justify-self: end;
+        }
+        
+        
+        .listing:nth-child(3n - 2) {
+            place-self: start !important;
+        }
+        .listing:nth-child(3n - 1) {
+            place-self: center !important;
+        }
+        .listing:nth-child(3n) {
+            place-self: end !important;
         }
     }
 }
