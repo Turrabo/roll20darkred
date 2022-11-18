@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.14.2
+@version      1.14.3
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.14.2 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.14.3 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -1748,6 +1748,7 @@
         flex: 1;
         align-items: center;
         justify-content: space-between;
+        max-height: 1.8em;
     }
     .ui-dialog .ui-dialog-titlebar > *,
     .ui-dialog .ui-dialog-title > * {
@@ -5345,14 +5346,23 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
         transform: translateY(-7px);
     }
     .charsheet .licensecontainer > .advantagetoggle {
-        grid-column-start: -3;
-        grid-column-end: -2;
+        grid-column-start: -5;
+        grid-column-end: -4;
         order: 998;
     }
     .charsheet .licensecontainer > .whispertoggle {
         grid-column-start: -2;
         grid-column-end: -1;
         order: 999;
+    }
+    
+    
+    
+    .charsheet .whispertoggle > * {
+        width: 80px !important;
+    }
+    .charsheet .whispertoggle > :is(:nth-chile(1), :nth-child(2)) {
+        right: 84px !important;
     }
 
     
@@ -5580,10 +5590,11 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     grid-template: "advantage normal disadvantage" auto / minmax(110px, max-content) minmax(90px, max-content) minmax(130px, max-content);
     place-items: start start;
 }
-.advantagetoggle > *:nth-child(1),
-.advantagetoggle > *:nth-child(2) {
+.advantagetoggle:not(.whispertoggle) > :nth-child(1),
+.advantagetoggle:not(.whispertoggle) > :nth-child(2) {
     grid-area: advantage;
     border-radius: 99px 0 0 99px !important;
+    right: 228px !important;
 }
 .advantagetoggle > *:nth-child(3),
 .advantagetoggle > *:nth-child(4) {
@@ -5680,8 +5691,8 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     box-shadow: 0px 0px 10px var(--color-yellow);
     color: var(--color-button-hover) !important;
 }
-.charsheet .advantagetoggle input[type="radio"],
-.charsheet .advantagetoggle input[type="radio"]+span {
+.charsheet .advantagetoggle:not(.whispertoggle) input[type="radio"],
+.charsheet .advantagetoggle:not(.whispertoggle) input[type="radio"]+span {
     width: 110px !important;
 }
 .charsheet .advantagetoggle input[type="radio"]+span:nth-of-type(1) {
@@ -5695,14 +5706,13 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
 .charsheet .advantagetoggle {
     left: 345px;
 }
-.charsheet .advantagetoggle input.toggle-left,
-.charsheet .advantagetoggle input.toggle-left+span {
-    right: 227px;
-}
 .charsheet .advantagetoggle input.toggle-center,
 .charsheet .advantagetoggle input.toggle-center+span {
     right: 114px;
 }
+    .charsheet .advantagetoggle input[type="radio"] {
+        height: 25px;
+    }
 .charsheet input[type="radio"].tab-button.core,
 .charsheet input[type="radio"].tab-button.core+span {
     width: 70px;
