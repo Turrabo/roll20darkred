@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.14.3
+@version      1.15.0
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -14,7 +14,7 @@
     /* -------------------------------------------------------------------------- */
     :root {
         --color-bg-light: #242533;
-	--color-bg-light-rgba: rgb(36, 37, 51, 0.95);
+	    --color-bg-light-rgba: rgb(36, 37, 51, 0.95);
         --color-bg-dark: #1c1d28;
         --color-bg-medium: #21222f;
         --color-text-main: #fff;
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.14.3 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.15.0 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -4328,11 +4328,12 @@
     /* -------------------------------------------------------------------------- */
     /* ------------------------------- Text Input ------------------------------- */
     #textchat-input {
-        padding: 10px 5px !important;
+        padding: 10px 15px 10px 10px !important;
         box-shadow: 0 -13px 10px -10px rgba(0,0,0,0.4);
-        height: 90px !important;
+        height: 110px !important;
         background-color: var(--color-bg-light);
         border: 0px;
+        box-sizing: border-box;
     }
     #textchat-input textarea {
         width: calc(100% - 10px) !important;
@@ -4343,9 +4344,12 @@
         width: calc(100% - 43px);
         margin-right: 9px;
         height: 30px;
+        margin-bottom: 0;
     }
     #textchat-input .clear+div {
-        width: calc(100% - 58px);
+        width: 100%;
+        display: flex;
+        align-items: center;
     }
     #textchat-input label {
         height: 25px;
