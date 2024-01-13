@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.16.0
+@version      1.16.1
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.16.0 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.16.1 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -3526,6 +3526,8 @@
     }
     #rightsidebar div.content a:not(.btn) {
         color: var(--color-yellow) !important;
+        background: none;
+        border: none;
     }
     .textchatcontainer .sheet-header > a {
         max-width: 80%;
@@ -4369,32 +4371,47 @@
     
     
     /* -------------------------------- Messages -------------------------------- */
+    .textchatcontainer .formula, .textchatcontainer .rolled {
+        border-radius: 5px;
+        padding-inline: 10px;
+    }
     .textchatcontainer .message {
         padding: 0 10px 10px;
         background-color: var(--color-bg-light);
     }
+    .sheet-rolltemplate-simple .sheet-container, .sheet-rolltemplate-simple3D .sheet-container, .sheet-rolltemplate-skill .sheet-container {
+        border-radius: 5px;
+    }
     .sheet-rolltemplate-atk .sheet-container:last-child:not(:only-child), .sheet-rolltemplate-atkdmg .sheet-container.sheet-atk:last-child:not(:only-child), .sheet-rolltemplate-dmg .sheet-atk:last-child:not(:only-child) {
         margin-bottom: -9px;
     }
+    .sheet-rolltemplate-atk .sheet-container, .sheet-rolltemplate-atkdmg .sheet-container.sheet-atk, .sheet-rolltemplate-dmg .sheet-atk {
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important;
+    }
+    .sheet-rolltemplate-dmg .sheet-container, .sheet-rolltemplate-atkdmg .sheet-container.sheet-damagetemplate {
+        border-bottom-left-radius: 5px !important;
+        border-bottom-right-radius: 5px !important;
+    }
     .sheet-rolltemplate-atk .sheet-container:last-child, .sheet-rolltemplate-atkdmg .sheet-container.sheet-atk:last-child, .sheet-rolltemplate-dmg .sheet-atk:last-child {
-        border-bottom-left-radius: 0.8em;
-        border-bottom-right-radius: 0.8em;
+        border-bottom-left-radius: 5px !important;
+        border-bottom-right-radius: 5px !important;
     }
     .sheet-rolltemplate-dmg div.sheet-desc {
         padding-top: 0;
         padding-bottom: 0;
     }
     .sheet-rolltemplate-dmg div.sheet-desc:first-child {
-        border-top-left-radius: 0.8em;
-        border-top-right-radius: 0.8em;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         overflow: hidden;
     }
     .sheet-rolltemplate-atk .sheet-info:last-child {
         padding: 1px 0;
     }
     .sheet-rolltemplate-atk .sheet-info:last-child .sheet-top:empty + .sheet-middle {
-        border-bottom-right-radius: 0.8em;
-        border-bottom-left-radius: 0.8em;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
     .sheet-rolltemplate-atkdmg .sheet-desc.sheet-info {
         padding: 0;
@@ -4403,8 +4420,8 @@
         box-shadow: none;
     }
     .sheet-rolltemplate-dmg:only-child .sheet-container.sheet-damagetemplate:only-child {
-        border-top-right-radius: 0.8em;
-        border-top-left-radius: 0.8em;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
     }
     
     .sheet-rolltemplate-simple .sheet-charname, .sheet-rolltemplate-simple3D .sheet-charname, .sheet-rolltemplate-skill .sheet-charname, .sheet-rolltemplate-atk .sheet-charname, .sheet-rolltemplate-dmg .sheet-charname, .sheet-rolltemplate-atkdmg .sheet-charname {
@@ -4413,10 +4430,10 @@
         padding-bottom: 7px;
     }
     .sheet-rolltemplate-dmg .sheet-label {
-        padding-bottom: 0.8em
+        padding-bottom: 5px;
     }
     .sheet-rolltemplate-spell .sheet-container:only-child {
-        border-radius: 0.8em;
+        border-radius: 5px;
     }
     
     
@@ -4466,10 +4483,13 @@
     }
     /* Roll result */
     .textchatcontainer .message.rollresult .avatar {
-        top: 35px !important;
+        top: 48px !important;
+    }
+    .textchatcontainer .message.rollresult .tstamp {
+        left: 0px !important;
     }
     .textchatcontainer .message.rollresult .by {
-        margin-left: -17px
+        margin-left: -30px;
     }
     .textchatcontainer .rollresult.quantumRoll {
         background-position-x: calc(100% - 11px) !important;
@@ -4551,8 +4571,12 @@
         background-color: var(--color-button-main);
         color: var(--color-text-primary);
     }
+    
+    
     /* Formula */
-    .textchatcontainer .formula, .textchatcontainer .rolled {
+    
+    .textchatcontainer .formula,
+    .textchatcontainer .rolled {
         background: var(--color-element-bg);
         border: 0px;
         font-size: inherit;
@@ -4568,10 +4592,13 @@
     }
     .diceroll .didroll {
         font-family: var(--font-number);
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 800;
         color: var(--color-text-primary);
         text-shadow: none;
+        margin: 0;
+        line-height: 1;
+        min-height: unset;
     }
     .diceroll .backing {
         color: var(--color-bg-dark);
@@ -4586,14 +4613,25 @@
         font-weight: 800;
     }
     .textchatcontainer .formattedformula {
-        line-height: 30px;
-        margin-top: 5px;
-        margin-bottom: 2px;
+        display: inline-flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        align-items: center;
+        line-height: 1;
+        margin-block: 5px 2px;
         font-size: 24px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px var(--color-text-disabled);
+        padding-block: 5px;
     }
-    .textchatcontainer .formattedformula>.dicegrouping.ui-sortable {
-        font-family: var(--font-number);
-        font-size: 24px;
+    .textchatcontainer .formattedformula > .dicegrouping.ui-sortable,
+    .textchatcontainer .formattedformula > .dicegrouping.ui-sortable .diceroll,
+    .textchatcontainer .formattedformula > .dicegrouping.ui-sortable .diceroll .dicon {
+        display: contents;
+    }
+    ,
+    .textchatcontainer .formattedformula > .dicegrouping.ui-sortable .diceroll .dicon .backing {
+        display: none;
     }
     .textchatcontainer .rolled {
         font-family: var(--font-number);
@@ -4615,16 +4653,42 @@
         background-size: 30px 30px;
     }
     .message.rollresult {
-        padding: 0.8em 2em 1em;
+        padding: 0.8em 40px 1em;
+    }
+    .sheet-rolltemplate-dmgaction {
+        background-color: var(--color-element-bg) !important;
+        border-radius: 5px;
+        border: 0px;
+        box-shadow: 0px 0px 2px var(--color-text-disabled);
+        color: var(--color-text-secondary);
+        font-size: 12px;
+        line-height: 16px;
+        padding: 10px;
+        margin-inline: 30px;
+        width: auto;
+    }
+    .sheet-rolltemplate-dmgaction .inlinerollresult {
+        display: inline-block;
+        background: none;
+        margin-top: 5px;
+        color: white !Important;
+    }
+    .sheet-rolltemplate-dmgaction .sheet-header {
+        color: var(--color-button-main);
+    }
+    .sheet-rolltemplate-dmgaction .sheet-arrow-right {
+        border-left-color: var(--color-button-main) !important;
+        margin-block: 5px;
     }
     /* All */
     .textchatcontainer .avatar {
         right: 10px;
-        left: auto;
-        top: -5px !important;
+        left: 8px;
+        top: 41px !important;
         width: 30px;
         height: 30px;
         opacity: 1;
+        scale: 0.8;
     }
     .textchatcontainer .avatar img {
         border-radius: 5px;
@@ -4635,16 +4699,18 @@
         max-height: 50px;
         box-shadow: 0px 0px 2px var(--color-text-disabled);
     }
-    .textchatcontainer.withtimestamps .message .tstamp {
+    .textchatcontainer .tstamp {
         color: var(--color-text-disabled);
-        padding: 5px;
+        padding: 5px !important;
+        top: 32px !important;
+        left: 29px;
     }
     .textchatcontainer .by {
         font-family: var(--font-header);
         font-size: 22px;
         font-weight: 400;
         display: block;
-        padding-left: 5px;
+        padding-left: 38px;
         padding-bottom: 10px;
         margin-top: 30px;
         text-shadow: 0 0 4px black;
@@ -4808,6 +4874,8 @@
     .sheet-rolltemplate-simple .sheet-advspacer, .sheet-rolltemplate-atk .sheet-advspacer, .sheet-rolltemplate-atkdmg .sheet-advspacer, .sheet-rolltemplate-dmg .sheet-advspacer {
         border: 0px;
         border-left: 1px dashed var(--color-text-disabled);
+        margin-top: 13px !important;
+        height: 30px !important;
     }
     .sheet-rolltemplate-skill .sheet-roll+.sheet-roll:before {
         background: none;
@@ -4864,12 +4932,13 @@
         padding: 5px 10px 5px 10px;
     }
     .sheet-rolltemplate-traits .sheet-desc {
-        line-height: 14px;
+        line-height: 1.4;
     }
     .sheet-rolltemplate-npcdmg .sheet-desc {
-        line-height: 1.2;
+        font-size: 12px;
+        line-height: 1.4;
         display: inline-block;
-        margin: 1em 0.4em 0.2em 0.5em;
+        margin: 1em 0.9em 0.2em;
     }
     .sheet-rolltemplate-npcdmg .sheet-damagetemplate {
         line-height: 1.2;
@@ -4904,11 +4973,11 @@
     .sheet-rolltemplate-dmg .sheet-solo .sheet-damage, .sheet-rolltemplate-atk .sheet-solo>span, .sheet-rolltemplate-atk .sheet-adv>span, .sheet-rolltemplate-dmg .sheet-desc span.sheet-plus, .sheet-rolltemplate-dmg span.sheet-damage, .sheet-rolltemplate-atkdmg .sheet-desc span.sheet-plus {
         font-weight: 800;
         font-family: var(--font-number);
-        font-size: 12px;
+        font-size: 18px;
         white-space: nowrap !important;
         color: inherit;
         word-spacing: 0px;
-        line-height: 24px !important;
+        line-height: 1.4 !important;
         display: inline-block;
     }
     .sheet-rolltemplate-dmg .inlinerollresult, .sheet-rolltemplate-atk .inlinerollresult {
@@ -5110,7 +5179,7 @@ button.rollabil.btn.dfontd20 {
 .charsheet .licensecontainer .container:not(.npc) .saving-throw-container,
 .charsheet .licensecontainer .container:not(.npc) .skills-container {
     border: none;
-    border-radius: 10px;
+    border-radius: 5px !important;
     background-color: var(--color-element-bg);
     padding-bottom: 25px;
     box-shadow: 0px 0px 2px var(--color-text-disabled);
@@ -5229,7 +5298,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     background-color: var(--color-element-bg);
     border-image-source: none;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 0px 2px var(--color-text-disabled);
 }
 .charsheet .licensecontainer .container:not(.npc) .col1>.insp-prof-container,
@@ -5237,8 +5306,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .licensecontainer .container:not(.npc) .insp-prof-container {
     background-color: var(--color-bg-dark);
     background-image: none;
-    border-radius: 0px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .charsheet .licensecontainer .container:not(.npc) .insp-prof-container+.insp-prof-container {
     height: 50px;
@@ -5246,14 +5314,14 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .licensecontainer .container:not(.npc) .col1>.insp-prof-container .value,
 .charsheet .insp-prof-container .value span {
     background-color: var(--color-element-bg);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 0px 2px var(--color-text-disabled);
 }
 .charsheet .licensecontainer .container:not(.npc) .hp {
     background-color: var(--color-element-bg) !important;
     background-image: none !important;
     margin: 9px 9px 9px 9.5px !important;
-    border-radius: 10px;
+    border-radius: 5px;
     width: calc(100% - 19px);
     outline: 10px solid var(--color-bg-dark);
 }
@@ -5288,7 +5356,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .licensecontainer .container:not(.npc) .resources {
     padding: 5px;
     background-color: var(--color-bg-dark);
-    border-radius: 10px;
+    border-radius: 5px;
     margin-top: 10px;
 }
 .charsheet .licensecontainer .container:not(.npc) .attacks,
@@ -5320,7 +5388,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     border-bottom-right-radius: 10px;
 }
 .charsheet .textbox {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .charsheet .col {
     width: 32%;
@@ -6604,7 +6672,7 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     .charsheet .licensecontainer .container:not(.npc) .spell-level {
         background-image: none !important;
         background-color: var(--color-element-bg);
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0px 0px 2px var(--color-text-disabled);
     }
     .charsheet .licensecontainer .container:not(.npc) .spell-level .level span {
@@ -6943,8 +7011,8 @@ input[name="attr_advantagetoggle"][class*="toggle"]:not(:checked) + span:hover {
     }
     .sheet-rolltemplate-npcdmg .sheet-container.sheet-dmgcontainer {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
+        align-items: baseline;
     }
     .sheet-rolltemplate-npcdmg {
         margin-top: 0px;
