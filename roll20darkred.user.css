@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.15.4
+@version      1.16.0
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,7 +40,7 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.15.4 - by Turabbo & Shevernitskiy";
+        --version: "Roll20 Dark Red V1.16.0 - by Turabbo & Shevernitskiy";
 /*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
 /*         --anim-attack: slide-in-blurred-right 0.6s; */
 /*         --anim-damage: slide-in-blurred-top 0.5s; */
@@ -2281,9 +2281,6 @@
     
     
     /* ------------------------------ Turn Order -------------------------------- */
-    #initiativewindow {
-        width: calc(100% - 5px) !important;
-    }
     .ui-dialog.ui-widget.ui-widget-content {
         min-width: 160px;
     }
@@ -2311,25 +2308,25 @@
     
     
     #initiativewindow .token {
-        display: grid;
+        display: grid !important;
         grid-auto-flow: column;
         grid-template: "image name initiative" auto / 30px 1fr minmax(30px, auto);
         gap: 8px;
         align-items: center;
         justify-content: space-between;
         
-        padding-top: 2px;
-        padding-bottom: 2px;
-        margin-bottom: 4px;
-        border: 0px;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+        margin-bottom: 4px !important;
+        border: none !important;
         border-radius: 5px;
-        background-color: rgba(0,0,0,0.25);
+        background-color: rgba(0,0,0,0.25) !important;
     }
     #initiativewindow .token:first-child {
-        background-color: #085b96;
-        margin: 8px -2px 12px;
-        border: solid 2px #2d84c1;
-        box-shadow: 0 0 8px var(--color-blue);
+        background-color: #085b96 !important;
+        margin: 8px -2px 12px !important;
+        border: solid 2px #2d84c1 !important;
+        box-shadow: 0 0 8px var(--color-blue) !important;
     }
     #initiativewindow .token .clear {
         display: none;
