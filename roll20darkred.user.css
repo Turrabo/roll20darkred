@@ -3,7 +3,7 @@
 @namespace    github.com/Turrabo/roll20darkred
 @homepageURL  https://github.com/Turrabo/roll20darkred
 @updateURL    https://raw.githubusercontent.com/Turrabo/roll20darkred/master/roll20darkred.user.css
-@version      1.16.1
+@version      1.16.2
 @author       shevernitskiy, Turrabo
 @license      MIT
 ==/UserStyle== */
@@ -40,15 +40,8 @@
         --font-header: "Alegreya Sans SC", sans-serif;
         --font-secondary: "Ruda", sans-serif;
         --font-mono: "Ubuntu Mono", monospace;
-        --version: "Roll20 Dark Red V1.16.1 - by Turabbo & Shevernitskiy";
-/*         --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s; */
-/*         --anim-attack: slide-in-blurred-right 0.6s; */
-/*         --anim-damage: slide-in-blurred-top 0.5s; */
-/*         --anim-traits: bounceInLeft 1s; */
-/*         --anim-crit: text-flicker-in-glow 2s linear 1s both; */
-/*         --anim-spell: jackInTheBox 1s; */
-/*         --anim-simple: flipInY 1s; */
-	--anim-sheet: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        --version: "Roll20 Dark Red V1.16.2 - by Turabbo & Shevernitskiy";
+	    --anim-sheet: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     /* ---------------------------------- Animation ----------------------------- */
     @keyframes fadein {
@@ -4847,6 +4840,11 @@
         color: var(--color-blue);
         text-shadow: 0px 0px 20px, 0px 0px 20px !important;
         animation: var(--anim-crit);
+    }
+    .sheet-rolltemplate-darkmode.sheet-rolltemplate-simple div.sheet-container,
+    .sheet-rolltemplate-darkmode.sheet-rolltemplate-simple3D div.sheet-container,
+    .sheet-rolltemplate-darkmode.sheet-rolltemplate-skill div.sheet-container {
+        background-image: none !important;
     }
     .sheet-rolltemplate-atk .sheet-save .sheet-savedc span, .sheet-rolltemplate-dmg .sheet-save .sheet-savedc span, .sheet-rolltemplate-atkdmg .sheet-save .sheet-savedc span {
         font-size: 26px;
